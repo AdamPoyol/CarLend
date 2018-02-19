@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Contactez-nous</title>
+        <link rel="stylesheet" href="c_contact.css">
+    <body>
+        <div class="header">
+            <header>
+                <div class="header_gauche">
+                    <img id="CarLend" src="logo.png" alt="logo CarLend"/>
+                </div>
+                <div class="header_droite">
+                    <input id="login" type="login" name="login" placeholder="login"/>
+                    <input id="mdp" type="password" name="mdp" placeholder="password"/>
+                    <input type="submit" value="Connexion"/><br>
+                    <input type="submit" value="Inscription"/><br>
+
+                </div>
+            </header>
+        </div>
+        <div class = "conteneur">
+            <h2> Envoyer une demande </h2>
+            <p> Aidez-nous à vous répondre plus rapidement.
+
+                Précisez vos problèmes en renseignant les champs ci-dessous ce qui nous permettra
+                d'orienter votre question vers le département adéquat.
+                Soyez précis et si besoin, n'hésitez pas à associer à votre message des photocopies de documents.</p><br>
+
+            <form method="post" action=".php">
+                <label><br>
+                    <label>Adresse e-mail</label>
+                    <input id="email" type="email" name="mail" placeholder="Adresse e-mail" class="form"/><br><br><br>
+
+                    <label>Sujet</label>
+                    <input id="text" type="text" name="subject" placeholder="Sujet" class ="form"/><br><br><br>
+
+                    <label>Descriptif</label>
+                    <textarea name="ameliorer" id="ameliorer" placeholder="Descriptif" class ="desc"></textarea><br><br><br>
+
+                    <label>Pièces jointes</label>
+                    <input type="file" multiple="true" id="request-attachments" data-fileupload="true" data-dropzone="upload-dropzone" class="desc"><br><br>
+
+                    <input type="submit" name ="commit" value="Envoyer">
+                </label>
+            </div>
+        </div>
+    </body>
+</html>
