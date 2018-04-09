@@ -45,7 +45,7 @@ text-align: right;
 }
 
 .zone1{
-background:url(Screen.png) no-repeat;
+background:url(../Images/Screen.png) no-repeat;
 background-size: cover;
 width: 60%; height: 300px; width: auto; float:center;
 text-align: center;
