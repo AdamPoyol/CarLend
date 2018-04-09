@@ -2,48 +2,48 @@ CREATE DATABASE IF NOT EXISTS carlend CHARACTER SET 'utf8';
 USE carlend;
 
 CREATE TABLE IF NOT EXISTS connexion(
-  identifiant VARCHAR(30),
-  mot_de_passe VARCHAR(50),
+  identifiant VARCHAR(30) NOT NULL,
+  mot_de_passe VARCHAR(32) NOT NULL,
   id_utilisateur INT(3)
 )ENGINE=INNODB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS utilisateur(
-  id_utilisateur INT(3)AUTO_INCREMENT,
-  nom VARCHAR(30),
-  prenom VARCHAR(30),
-  date_de_naissance DATE,
-  telephone VARCHAR(20),
-  adresse VARCHAR(50),
-  mail VARCHAR(50),
-  code_postal VARCHAR(10),
-  ville VARCHAR(50),
-  date_adhesion DATE,
-  lien_photo VARCHAR(50),
+  id_utilisateur INT UNSIGNED AUTO_INCREMENT,
+  nom VARCHAR(20) NOT NULL,
+  prenom VARCHAR(20) NOT NULL,
+  date_de_naissance DATE NOT NULL,
+  telephone VARCHAR(20) NOT NULL,
+  adresse VARCHAR(70) NOT NULL,
+  mail VARCHAR(50) NOT NULL,
+  code_postal VARCHAR(5) UNSIGNED ZEROFILL NOT NULL,
+  ville VARCHAR(20) NOT NULL,
+  date_adhesion DATE NOT NULL,
+  lien_photo VARCHAR(250),
   CONSTRAINT pk_utilisateur PRIMARY KEY (id_utilisateur)
 )ENGINE=INNODB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS vehicule(
-  id_vehicule INT(3)AUTO_INCREMENT,
-  id_utilisateur INT(3),
-  immatriculation VARCHAR(10),
-  marque VARCHAR(30),
-  modele VARCHAR(30),
-  lien_photo VARCHAR(50),
+  id_vehicule INT(3)AUTO_INCREMENT NOT NULL,
+  id_utilisateur INT UNSIGNED NULL DEFAULT NULL,
+  immatriculation VARCHAR(10) NOT NULL,
+  marque VARCHAR(30) NOT NULL ,
+  modele VARCHAR(30) NOT NULL ,
+  lien_photo VARCHAR(250),
   CONSTRAINT pk_vehicule PRIMARY KEY(id_vehicule)
 )ENGINE=INNODB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS mise_en_location(
   id_mise_en_location INT(3)AUTO_INCREMENT,
-  id_utilisateur INT(3),
-  id_vehicule INT(3),
+  id_utilisateur INT UNSIGNED NULL DEFAULT NULL,
+  id_vehicule INT UNSIGNED NULL DEFAULT NULL,
   date_mise_en_location DATE DEFAULT NULL,
   CONSTRAINT pk_mise_en_location PRIMARY KEY(id_mise_en_location)
 )ENGINE=INNODB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS location(
   id_location INT(3)AUTO_INCREMENT,
-  id_utilisateur INT(3),
-  id_vehicule INT(3),
+  id_utilisateur INT UNSIGNED NULL DEFAULT NULL,
+  id_vehicule INT UNSIGNED NULL DEFAULT NULL,
   date_debut_location DATE,
   date_fin_location DATE DEFAULT NULL,
   CONSTRAINT pk_location PRIMARY KEY(id_location)
