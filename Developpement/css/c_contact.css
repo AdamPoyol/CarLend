@@ -49,21 +49,21 @@ label {
     margin-top:10px;
     display:block;
 }
-input, textarea, select, option {
+.contact, .contact2, select, option {
     background-color: transparent;
 }
-input, textarea, select {
+.contact, .contact2, select {
     padding:3px;
     border:1px solid;
     border-radius:5px;
     width:200px;
     box-shadow:1px 1px 2px #C0C0C0 inset;
 }
-.form {
+.contact {
     min-height: 30px;
     min-width: 700px;
 }
-.desc{
+.contact2{
     min-height: 100px;
     min-width: 700px;
 }
