@@ -11,11 +11,10 @@
                     <img id="CarLend" src="../Images/logo.png" alt="logo CarLend"/>
                 </div>
                 <div class="header_droite">
-                    <input id="login" type="login" name="login" placeholder="login"/>
+                    <input id="login" type="text" name="login" placeholder="login"/>
                     <input id="mdp" type="password" name="mdp" placeholder="password"/>
-                    <input type="submit" value="Connexion"/><br>
+                    <input type="submit" value="Connexion"/>
                     <input type="submit" value="Inscription"/><br>
-
                 </div>
             </header>
         </div>
@@ -25,25 +24,26 @@
 
                 Précisez vos problèmes en renseignant les champs ci-dessous ce qui nous permettra
                 d'orienter votre question vers le département adéquat.
-                Soyez précis et si besoin, n'hésitez pas à associer à votre message des photocopies de documents.</p><br>
+                Soyez précis et si besoin, n'hésitez pas à associer à votre message des photocopies de documents.</p>
 
             <form method="post" action=".php">
                 <label><br>
                     <label>Adresse e-mail</label>
-                    <input id="email" type="email" name="mail" placeholder="Adresse e-mail" class="form"/><br><br><br>
+                    <input class="contact" id="email" type="email" name="mail" placeholder="Adresse e-mail"/><br><br>
 
                     <label>Sujet</label>
-                    <input id="text" type="text" name="subject" placeholder="Sujet" class ="form"/><br><br><br>
+                    <input class="contact" id="text" type="text" name="subject" placeholder="Sujet" /><br><br>
 
                     <label>Descriptif</label>
-                    <textarea name="ameliorer" id="ameliorer" placeholder="Descriptif" class ="desc"></textarea><br><br><br>
+                    <textarea  class="contact2" name="ameliorer" id="ameliorer" placeholder="Descriptif" ></textarea><br><br>
 
                     <label>Pièces jointes</label>
-                    <input type="file" multiple="true" id="request-attachments" data-fileupload="true" data-dropzone="upload-dropzone" class="desc"><br><br>
+                    <input class="contact2" type="file" multiple="true" id="request-attachments" data-fileupload="true" data-dropzone="upload-dropzone" ><br><br><br>
 
-                    <input type="submit" name ="commit" value="Envoyer">
+                    <input class="contact" type="submit" name ="commit" value="Envoyer">
+                    <br><br><br>
                 </label>
-            </div>
+            </form>
         </div>
     </body>
 </html>
