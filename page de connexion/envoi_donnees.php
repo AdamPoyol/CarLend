@@ -25,10 +25,11 @@ $Code_postale=$_POST['Code_postale'];
 $mail=$_POST['mail'];
 $Ville=$_POST['Ville'];
 $password=$_POST['password']
+$copie_permis=$_POST['copie_permis'];
 
 
 
-$sql="insert into Locataire (Nom, Prenom, telephone, Adresse, Code_postale, mail, Ville) values ('$Nom','$Prenom', '$telephone', '$Adresse', '$Code_postale', '$mail', '$Ville', '$password')" ;
+$sql="insert into Locataire (Nom, Prenom, telephone, Adresse, Code_postale, mail, Ville) values ('$Nom','$Prenom', '$telephone', '$Adresse', '$Code_postale', '$mail', '$Ville', '$password')";
 
 
   ?>
