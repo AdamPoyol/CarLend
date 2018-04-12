@@ -33,7 +33,7 @@
                         <label >Nom :</label>
                     </td>
                     <td>
-                        <input type="text" class="case"  placeholder=" Votre Nom">
+                        <input type="text" class="case" name="nom"  placeholder=" Votre Nom">
                     </td>
                 </tr> 
                 <tr>
@@ -41,7 +41,7 @@
                         <label >Prénom :</label>
                     </td>
                     <td>
-                        <input type="text" class="case"  placeholder=" Votre Prénom">
+                        <input type="text" class="case" name="prenom"  placeholder=" Votre Prénom">
                     </td>
                 </tr> 
                 <tr>
@@ -49,7 +49,7 @@
                         <label >Adresse e-mail :</label>
                     </td>
                     <td>
-                        <input type="text" class="case"  placeholder=" Votre Adresse e-mail">
+                        <input type="text" class="case" name="email" placeholder=" Votre Adresse e-mail">
                     </td>
                 </tr> 
                 <tr>
@@ -57,7 +57,7 @@
                         <label >Numéro de téléphone :</label>
                     </td>
                     <td>
-                        <input type="text" class="case"  placeholder=" Votre numéro de téléphone">
+                        <input type="text" class="case"  name="telephone" placeholder=" Votre numéro de téléphone">
                     </td>
                 </tr> 
                 <tr>
@@ -65,7 +65,7 @@
                         <label >Adresse :</label>
                     </td>
                     <td>
-                        <input type="text" class="case"  placeholder=" Votre Adresse">
+                        <input type="text" class="case" name="adresse" placeholder=" Votre Adresse">
                     </td>
                 </tr> 
                 <tr>
@@ -73,7 +73,7 @@
                         <label >code postale :</label>
                     </td>
                     <td>
-                        <input type="text" class="case"  placeholder=" Votre code postale">
+                        <input type="text" class="case" name="code_postale" placeholder=" Votre code postale">
                     </td>
                 </tr> 
                 <tr>
@@ -81,15 +81,7 @@
                         <label >Ville :</label>
                     </td>
                     <td>
-                        <input type="text" class="case"  placeholder=" Votre Ville">
-                    </td>
-                </tr> 
-                <tr>
-                    <td>
-                        <label >Numéro d'assurance :</label>
-                    </td>
-                    <td>
-                        <input type="text" class="case"  placeholder=" Votre numéro d'assurance">
+                        <input type="text" class="case" name="ville" placeholder=" Votre Ville">
                     </td>
                 </tr> 
                 <tr>
@@ -97,7 +89,7 @@
                         <label >Copie de permis :</label>
                     </td>
                     <td>
-                        <input type="text" class="case"  placeholder=" Votre Copie de permis">
+                        <input type="text" class="case" name="permis" placeholder=" Votre Copie de permis">
                     </td>
                 </tr> 
             </table>
@@ -106,3 +98,4 @@
 	</div>
 </body>
 </html>
+
