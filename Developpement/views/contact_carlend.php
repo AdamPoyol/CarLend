@@ -8,7 +8,7 @@
         <div class="header">
             <header>
                 <div class="header_gauche">
-                    <a href="accueil_carlend.html"><img id="CarLend" src="../Images/logo.png" alt="logo CarLend"/></a>
+                    <a href="accueil_carlend.php"><img id="CarLend" src="../Images/logo.png" alt="logo CarLend"/></a>
                 </div>
                 <div class="header_droite">
                     <input id="login" type="text" name="login" placeholder="login"/>

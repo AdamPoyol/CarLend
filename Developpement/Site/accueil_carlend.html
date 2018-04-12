@@ -11,8 +11,8 @@
 			<div class="header">
 					<div class="header_gauche">
 						<div class="header_gauche_menu">
-							<a href="accueil_carlend.html">Accueil<a><br>
-							<a href="location_carlend.html">Louer mon véhicules<a><br>
+							<a href="../views/accueil_carlend.php">Accueil</a><br>
+								<a href="../views/location_carlend.php">Louer mon véhicules</a><br>
 						</div>
 
 						<div class="header_gauche_logo">
@@ -22,7 +22,7 @@
 					</div>
 					<div class="header_droite">
 						<form method="POST" action=".php">
-						<input id="login" type="login" name="login" placeholder="login"/>
+						<input id="login" type="text" name="login" placeholder="login"/>
 						<input id="mdp" type="password" name="mdp" placeholder="password"/>
 						<input type="submit" value="se connecter"/><br>
 					</form>
@@ -32,9 +32,9 @@
 			<div class="zone1_accueil">
 				<div class="recherche_accueil">
 					<form method="POST" action=".php">
-					<br><input id="marque" type="word" name="marque" placeholder="Marque"/>
-					<input id="modele" type="word" name="modele" placeholder="Modèle"/>
-					<input id="ville" type="word" name="ville" placeholder="Ville"/>
+					<br><input id="marque" type="text" name="marque" placeholder="Marque"/>
+					<input id="modele" type="text" name="modele" placeholder="Modèle"/>
+					<input id="ville" type="text" name="ville" placeholder="Ville"/>
 					<input type="submit" value="Rechercher"/>
 				</form>
 				</div>
@@ -153,14 +153,14 @@ Les développeurs et le chef de projet auront la responsabilité de développer 
 			<div class="footer">
 				<div class="footer_gauche">
 					<p>
-						<a href="contact_carlend.html">Nous contacter<a><br>
-						<a href="">Comment ça marche ?<a><br>
-						<a href="">A propos<a>
+						<a href="contact_carlend.html">Nous contacter</a><br>
+						<a href="">Comment ça marche ?</a><br>
+						<a href="">A propos</a>
 					</p>
 				</div>
 				<div class="footer_droite">
 					<p>
-						<a href="">CarLend © 2018<a>
+						<a href="../views/accueil_carlend.php">CarLend © 2018</a>
 				</div>
 			</div>
 		</div>

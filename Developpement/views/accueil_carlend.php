@@ -1,8 +1,7 @@
 		<?php
-			require_once ("header.php")
+			require_once ("header.php");
 		?>
-
-		<form method="POST" action="location_carlend.html">
+		<form method="POST" action="location_carlend.php">
 		<div id="conteneur">
 			<div class="zone1">
 				<div class="recherche">
@@ -122,22 +121,4 @@
 				Les développeurs et le chef de projet auront la responsabilité de développer et gérer le site de A à Z et de gérer le backup durant tout le développement. Ils auront aussi la devoir de donner au client une interface simple a utiliser
 				<p>
 			</div>
-			<div class="clear"></div>
-			<footer>
-				<div class="footer">
-					<div class="footer_gauche">
-						<p>
-							<a href="contact_carlend.php">Nous contacter</a><br>
-							<a href="">Comment ça marche ?</a><br>
-							<a href="">A propos</a>
-						</p>
-					</div>
-					<div class="footer_droite">
-						<p>
-							<a href="accueil_carlend.html">CarLend © 2018</a>
-					</div>
-				</div>
-			</footer>
-		</form>
-	</body>
-</html>
+        </form>

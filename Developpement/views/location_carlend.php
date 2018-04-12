@@ -1,37 +1,6 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>LOCATION</title>
-		<link rel="stylesheet" href="../css/css_carlend.css">
-    <script src="js_carlend.js" type="text/javascript"></script>
-	</head>
-	<body>
-		<form method="POST" action="toto.php">
-		<div id="conteneur_location">
-			<div class="header">
-
-					<div class="header_gauche">
-
-            <div class="header_gauche_menu">
-                <a href="accueil_carlend.html">Accueil</a><br>
-  						<a href="location_carlend.html">Louer mon véhicules<br>
-                        </a>
-            </div>
-
-            <div class="header_gauche_logo">
-                <a href="accueil_carlend.html"><img id="CarLend" src="../Images/logo.png" alt="logo CarLend"/></a>
-            </div>
-
-					</div>
-
-					<div class="header_droite">
-						<input id="login" type="login" name="login" placeholder="login"/>
-						<input id="mdp" type="password" name="mdp" placeholder="password"/>
-						<input type="submit" value="se connecter"/><br>
-						<a href="">Inscription</a>
-					</div>
-			</div>
+<?php
+require_once ("header.php");
+?>
 			<div class="zone1_location">
         <div class="louer">
           <a href="">Proposer mon véhicule à la location</a>
