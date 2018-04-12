@@ -1,0 +1,98 @@
+/* latin */
+@font-face {
+  font-family: 'Secular One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Secular One'), local('SecularOne-Regular'), url(https://fonts.gstatic.com/s/secularone/v2/Bt9hCbXtVHCjlv_xsF8oqY4P5ICox8Kq3LLUNMylGO4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+body{
+font-family:"Secular One";
+background: white no-repeat;
+background-size: cover;
+}
+
+#conteneur{
+margin: 0 auto; width: 100%; height:1000px;
+}
+
+.header{
+background-color: #FFFFFF; width: 100%; height: 100px; float: center;
+position: relative;
+bottom: 0;
+left: 0;
+text-align: right;
+}
+
+.header_gauche{
+background:no-repeat;
+background-size: cover;
+width:30%;
+height: 80px; float: left;
+margin: 5px auto auto 40px;
+position: relative;
+text-align: center;
+}
+
+.header_droite{
+background:no-repeat;
+background-size: cover;
+width:30%;
+height: 30px; float: right;
+margin: 20px 20px auto auto;
+position: relative;
+text-align: right;
+}
+
+.zone1{
+background:url(fond_zone1.jpg) no-repeat;
+background-size: cover;
+width: 100%; height: 300px; float: center;
+text-align: center;
+}
+
+.recherche{
+background:#b5272e no-repeat;
+background-size: cover;
+opacity: 0.95; 
+width:40%;
+height: 72px; float: right;
+margin: 10px 450px auto auto;
+border-radius: 10px;
+text-align: center;
+}
+
+.zone2{
+background-color: white;
+width: 100%; height: 500px; float: center;
+position: relative;
+}
+
+.footer{
+background-color: #EEEEEE; width: 100%; height: 100px; float: right;
+position: relative;border-radius: 10px;
+}
+
+.footer_gauche{
+background:no-repeat;
+background-size: cover;
+width:30%;
+height: 30px; float: left;
+margin: 5px auto auto 0;
+position: relative;
+text-align: center;
+}
+
+.footer_droite{
+background:no-repeat;
+background-size: cover;
+width:20%;
+height: 30px; float: right;
+margin: 20px 0 auto auto;
+position: relative;
+text-align: center;
+}
+
+.clear{
+clear: both;
+}
