@@ -1,24 +1,7 @@
-<!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <title>Contactez-nous</title>
-        <link rel="stylesheet" href="../css/css_carlend.css">
-    <body>
-        <div class="header">
-            <header>
-                <div class="header_gauche">
-                    <a href="accueil_carlend.php"><img id="CarLend" src="../Images/logo.png" alt="logo CarLend"/></a>
-                </div>
-                <div class="header_droite">
-                    <input id="login" type="text" name="login" placeholder="login"/>
-                    <input id="mdp" type="password" name="mdp" placeholder="password"/>
-                    <input type="submit" value="Connexion"/>
-                    <input type="submit" value="Inscription"/><br>
-                </div>
-            </header>
-        </div>
-        <div class = "conteneur">
+<?php
+    require_once ("../inc/header.inc.php");
+?>
+        <div class = "conteneur_contact">
             <h2> Envoyer une demande </h2>
             <p> Aidez-nous à vous répondre plus rapidement.
 
@@ -45,21 +28,6 @@
                 </label>
             </form>
         </div>
-        <div class="clear"></div>
-        <footer>
-            <div class="footer">
-                <div class="footer_gauche">
-                    <p>
-                        <a href="contact_carlend.php">Nous contacter</a><br>
-                        <a href="">Comment ça marche ?</a><br>
-                        <a href="">A propos</a>
-                    </p>
-                </div>
-                <div class="footer_droite">
-                    <p>
-                        <a href="accueil_carlend.html">CarLend © 2018</a>
-                </div>
-            </div>
-        </footer>
-    </body>
-</html>
+<?php
+require_once ("../inc/footer.inc.php");
+?>

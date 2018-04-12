@@ -1,17 +1,17 @@
 		<?php
-			require_once ("header.php");
+			require_once ("../inc/header.inc.php");
 		?>
 		<form method="POST" action="location_carlend.php">
-		<div id="conteneur">
-			<div class="zone1">
-				<div class="recherche">
+		<div id="conteneur_accueil">
+			<div class="zone1_accueil">
+				<div class="recherche_accueil">
 					<br><input id="marque" type="text" name="marque" placeholder="Marque" class="form"/>
 					<input id="modele" type="text" name="modele" placeholder="Modèle" class="form"/>
 					<input id="ville" type="text" name="ville" placeholder="Ville" class="form"/>
 					<input type="submit" value="Rechercher" class="form"/>
 				</div>
 			</div>
-			<div class="zone2">
+			<div class="zone2_accueil">
 				<p><br>
 				1.Présentation du projet
 
@@ -122,3 +122,6 @@
 				<p>
 			</div>
         </form>
+        <?php
+        require_once ("../inc/footer.inc.php");
+        ?>
