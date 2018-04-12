@@ -27,6 +27,7 @@
 
 	<div class="formulaire">
 		<form method="POST" action="">
+		<form method="POST" action="envoi_donnees.php">
 			<table>
 			<tr>
                  <td>

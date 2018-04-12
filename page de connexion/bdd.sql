@@ -13,6 +13,7 @@ CREATE TABLE IF NOT EXISTS Locataire(
         mail          Varchar (50) NOT NULL ,
         Ville         Varchar (50) NOT NULL ,
         date_adhesion Date NOT NULL ,
+        password      Varchar (50) NOT NULL ,
         PRIMARY KEY (numero_client )
 )ENGINE=InnoDB;
 
@@ -40,6 +41,7 @@ CREATE TABLE IF NOT EXISTS info_location(
         id_voiture     Int NOT NULL ,
         PRIMARY KEY (id_location )
 )ENGINE=InnoDB
+)ENGINE=InnoDB;
 
 
 CREATE TABLE IF NOT EXISTS loue(
