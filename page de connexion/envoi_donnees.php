@@ -28,7 +28,6 @@ $password=$_POST['password']
 
 
 
-$sql="insert into Locataire (Nom, Prenom, telephone, Adresse, Code_postale, mail, Ville) values ('$Nom','$Prenom', '$telephone', '$Adresse', '$Code_postale', '$mail', '$Ville')" ;
 $sql="insert into Locataire (Nom, Prenom, telephone, Adresse, Code_postale, mail, Ville) values ('$Nom','$Prenom', '$telephone', '$Adresse', '$Code_postale', '$mail', '$Ville', '$password')" ;
 
 
