@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>Accueil</title>
-		<link rel="stylesheet" href="../css/css_carlend.css">
-	</head>
-	<body>
+		<?php
+			require_once ("header.php")
+		?>
+
 		<form method="POST" action="location_carlend.html">
 		<div id="conteneur">
 			<div class="zone1">
@@ -131,7 +127,7 @@
 				<div class="footer">
 					<div class="footer_gauche">
 						<p>
-							<a href="contact_carlend.html">Nous contacter</a><br>
+							<a href="contact_carlend.php">Nous contacter</a><br>
 							<a href="">Comment ça marche ?</a><br>
 							<a href="">A propos</a>
 						</p>
