@@ -1,5 +1,5 @@
 <?php
-require_once ("header.php");
+include_once ("../inc/header.inc.php");
 ?>
 			<div class="zone1_location">
         <div class="louer">
@@ -60,21 +60,6 @@ require_once ("header.php");
       <div class="zone3_location">
         <h2>Comment faire ?</h2>
       </div>
-      <div class="clear"></div>
-			<div class="footer">
-				<div class="footer_gauche">
-					<p>
-						<a href="contact_carlend.php">Nous contacter</a><br>
-						<a href="">Comment ça marche ?</a><br>
-						<a href="">A propos</a>
-                        </p>
-				</div>
-				<div class="footer_droite">
-					<p>
-						<a href="">CarLend © 2018</a>
-				</div>
-			</div>
-		</div>
-		</form>
-	</body>
-</html>
+      <?php
+    include_once ("../inc/footer.inc.php");
+?>

@@ -3,12 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <title>Contactez-nous</title>
-        <link rel="stylesheet" href="../css/css_carlend.css">
+        <link rel="stylesheet" href="../inc/css/css_carlend.css">
     <body>
         <div class="header">
             <header>
                 <div class="header_gauche">
-                    <a href="accueil_carlend.php"><img id="CarLend" src="../Images/logo.png" alt="logo CarLend"/></a>
+                    <a href="accueil_carlend.php"><img id="CarLend" src="../inc/img/logo.png" alt="logo CarLend"/></a>
                 </div>
                 <div class="header_droite">
                     <input id="login" type="text" name="login" placeholder="login"/>
@@ -57,7 +57,7 @@
                 </div>
                 <div class="footer_droite">
                     <p>
-                        <a href="accueil_carlend.html">CarLend © 2018</a>
+                        <a href="accueil_carlend.php">CarLend © 2018</a>
                 </div>
             </div>
         </footer>
