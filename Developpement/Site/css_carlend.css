@@ -1,0 +1,176 @@
+/* COMMUN */
+
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Nunito Regular'), local('Nunito-Regular'), url(https://fonts.gstatic.com/s/nunito/v9/cSNs3NwpEgPVRQzvkh3NeQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+body{
+font-family:"Nunito";
+background: white no-repeat;
+background-size: cover;
+}
+
+a{
+color: #000000; text-decoration: none;
+}
+
+.header{
+background-color: #FFFFFF; width: 100%; height: 100px; float: center;
+position: relative;
+bottom: 0;
+left: 0;
+text-align: right;
+}
+
+.header_gauche{
+background:no-repeat;
+background-size: cover;
+width:40%;
+height: 80px; float: left;
+margin: 20px 20px auto auto;
+position: relative;
+text-align: center;
+}
+
+.header_gauche_menu{
+background-color: #777777 no-repeat;
+background-size: cover;
+width:50%;
+height: 80px; float: left;
+position: relative;
+text-align: center;
+}
+
+.header_gauche_logo{
+background:no-repeat;
+background-size: cover;
+width:50%;
+height: 70px; float: right;
+}
+
+.header_droite{
+background:no-repeat;
+background-size: cover;
+width:40%;
+height: 30px; float: right;
+margin: 20px 20px auto auto;
+position: relative;
+text-align: right;
+}
+
+.footer{
+background-color: #EEEEEE; width: 100%; height: 100px; float: right;
+position: relative;border-radius: 10px;
+}
+
+.footer_gauche{
+background:no-repeat;
+background-size: cover;
+width:30%;
+height: 30px; float: left;
+margin: 5px auto auto 0;
+position: relative;
+text-align: center;
+}
+
+.footer_droite{
+background:no-repeat;
+background-size: cover;
+width:20%;
+height: 30px; float: right;
+margin: 20px 0 auto auto;
+position: relative;
+text-align: center;
+}
+
+.clear{
+clear: both;
+}
+
+/* ACCUEIL */
+
+.header_gauche a
+{
+  border-bottom: 1px solid;
+}
+#conteneur_accueil{
+margin: 0 auto; width: 100%; height:1000px;
+}
+
+.zone1_accueil{
+background:url(fond_zone1.jpg) no-repeat;
+background-size: cover;
+width: 60%; height: 300px; float: center;
+text-align: center; width: auto;
+margin: 30px 100px auto 80px;
+}
+
+.zone2_accueil{
+background-color: white;
+width: 100%; height: 500px; float: center;
+position: relative;
+}
+
+.recherche_accueil{
+background:#ffffff no-repeat;
+background-size: cover;
+opacity: 0.85;
+width:40%;
+height: 72px; float: right;
+margin: 100px 370px auto auto;
+border-radius: 10px;
+text-align: center;
+}
+
+/* LOCATION */
+
+#conteneur_location{
+margin: 0 auto; width: 100%; height:1500px;
+}
+
+.zone1_location{
+background:url(fond_zone1.jpg) no-repeat;
+background-size: cover;
+width: 100%; height: 300px; float: center;
+text-align: center;
+}
+
+.zone2_location{
+background-color: #efefef;
+width: 100%; height: 500px; float: center;
+position: relative;border-radius: 10px;
+margin: 10px auto 10px auto;
+}
+
+.zone3_location{
+background-color: #f0f0f0;
+width: 100%; height: 500px; float: center;
+position: relative;border-radius: 10px;
+margin: 10px auto 10px auto;
+}
+
+.louer{
+background:#ffffff no-repeat;
+background-size: cover;
+opacity: 0.95;
+width:40%;
+height: 72px; float: right;
+margin: 100px 450px auto auto;
+border-radius: 10px;
+text-align: center;
+line-height: 80px;
+}
+
+.recherche_location{
+background:#CFA700 no-repeat;
+background-size: cover;
+opacity: 0.85;
+width:60%;
+height: 72px; float: right;
+margin: 10px 250px auto auto;
+border-radius: 10px;
+text-align: center;
+}
