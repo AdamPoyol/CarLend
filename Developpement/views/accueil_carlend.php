@@ -1,33 +1,14 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>Accueil</title>
-		<link rel="stylesheet" href="../css/css_carlend.css">
-	</head>
-	<body>
-		<form method="POST" action="toto.php">
+		<?php
+			require_once ("header.php");
+		?>
+		<form method="POST" action="location_carlend.php">
 		<div id="conteneur">
-			<div class="header">
-				<header>
-					<div class="header_gauche">
-						<img id="CarLend" src="../Images/logo.png" alt="logo CarLend"/>
-					</div>
-					<div class="header_droite">
-						<input id="login" type="text" name="login" placeholder="login"/>
-						<input id="mdp" type="password" name="mdp" placeholder="password"/>
-						<input type="submit" value="Connexion"/>
-						<input type="submit" value="Inscription"/><br>
-
-					</div>
-				</header>
-			</div>
 			<div class="zone1">
 				<div class="recherche">
-					<br><input id="marque" type="word" name="marque" placeholder="Marque"/>
-					<input id="modele" type="word" name="modele" placeholder="Modèle"/>
-					<input id="ville" type="word" name="ville" placeholder="Ville"/>
-					<input type="submit" value="Rechercher"/>
+					<br><input id="marque" type="text" name="marque" placeholder="Marque" class="form"/>
+					<input id="modele" type="text" name="modele" placeholder="Modèle" class="form"/>
+					<input id="ville" type="text" name="ville" placeholder="Ville" class="form"/>
+					<input type="submit" value="Rechercher" class="form"/>
 				</div>
 			</div>
 			<div class="zone2">
@@ -140,34 +121,4 @@
 				Les développeurs et le chef de projet auront la responsabilité de développer et gérer le site de A à Z et de gérer le backup durant tout le développement. Ils auront aussi la devoir de donner au client une interface simple a utiliser
 				<p>
 			</div>
-			<div class="clear"></div>
-			<div class="footer">
-			<footer>
-				<div class="footer_gauche">
-					<p>
-						<a href="contact_carlend.html" >
-							Nous contacter
-						</a>
-					</p>
-					<p>
-						<a href="#" >
-							Comment ça marche ?
-						</a>
-					</p>
-					<p>
-						<a href="#" >
-							A propos
-						</a>
-					</p>
-				</div>
-				<div class="footer_droite">
-					<p>
-						CarLend © 2018
-					</p>
-				</div>
-			</footer>
-			</div>
-		</div>
-		</form>
-	</body>
-</html>
+        </form>

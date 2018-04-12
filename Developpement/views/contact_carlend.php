@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
         <title>Contactez-nous</title>
-        <link rel="stylesheet" href="../css/c_contact.css">
+        <link rel="stylesheet" href="../css/css_carlend.css">
     <body>
         <div class="header">
             <header>
                 <div class="header_gauche">
-                    <img id="CarLend" src="../Images/logo.png" alt="logo CarLend"/>
+                    <a href="accueil_carlend.php"><img id="CarLend" src="../Images/logo.png" alt="logo CarLend"/></a>
                 </div>
                 <div class="header_droite">
                     <input id="login" type="text" name="login" placeholder="login"/>
@@ -45,32 +45,21 @@
                 </label>
             </form>
         </div>
-        <!-- <div class="clear"></div>
-        <div class="footer">
-            <footer>
+        <div class="clear"></div>
+        <footer>
+            <div class="footer">
                 <div class="footer_gauche">
                     <p>
-                        <a href="contact_carlend.html" >
-                            Nous contacter
-                        </a>
-                    </p>
-                    <p>
-                        <a href="#" >
-                            Comment ça marche ?
-                        </a>
-                    </p>
-                    <p>
-                        <a href="#" >
-                            A propos
-                        </a>
+                        <a href="contact_carlend.php">Nous contacter</a><br>
+                        <a href="">Comment ça marche ?</a><br>
+                        <a href="">A propos</a>
                     </p>
                 </div>
                 <div class="footer_droite">
                     <p>
-                        CarLend © 2018
-                    </p>
+                        <a href="accueil_carlend.html">CarLend © 2018</a>
                 </div>
-            </footer>
-        </div> -->
+            </div>
+        </footer>
     </body>
 </html>

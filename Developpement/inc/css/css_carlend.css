@@ -1,0 +1,130 @@
+/* latin */
+@font-face {
+  font-family: 'Secular One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Secular One'), local('SecularOne-Regular'), url(https://fonts.gstatic.com/s/secularone/v2/Bt9hCbXtVHCjlv_xsF8oqY4P5ICox8Kq3LLUNMylGO4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+body{
+background: white no-repeat;
+background-size: cover;
+  position: relative;
+}
+
+#conteneur{
+margin: 0 auto; width: 100%; height:1000px;
+}
+
+.conteneur{
+  text-align: center;
+}
+.header{
+background-color: #FFFFFF; width: 100%; height: 100px;
+position: relative;
+bottom: 0;
+left: 0;
+text-align: right;
+}
+
+.header_gauche{
+background:no-repeat;
+background-size: cover;
+width:30%;
+height: 80px; float: left;
+margin: 5px auto auto 40px;
+position: relative;
+text-align: center;
+}
+
+.header_droite{
+background:no-repeat;
+background-size: cover;
+width:30%;
+height: 30px; float: right;
+margin: 30px 150px auto auto;
+position: relative;
+text-align: right;
+}
+
+.zone1{
+background:url(../Images/Screen.png) no-repeat;
+background-size: cover;
+height: 300px; width: auto;
+text-align: center;
+  margin: 30px 100px auto auto;
+  margin-left: 80px;
+
+}
+
+
+.recherche{
+background:white no-repeat;
+background-size: cover;
+opacity: 0.85;
+width:40%;
+height: 72px; float: right;
+margin: 110px 370px auto auto;
+border-radius: 10px;
+text-align: center;
+}
+
+.zone2{
+background-color: white;
+width: 100%; height: 500px;
+position: relative;
+}
+
+.form{
+  margin-top: 1em;
+}
+
+label {
+  margin-top:10px;
+  display:block;
+}
+.contact, .contact2, select, option {
+  background-color: transparent;
+}
+.contact, .contact2, select {
+  padding:3px;
+  border:1px solid;
+  border-radius:5px;
+  width:200px;
+  box-shadow:1px 1px 2px #C0C0C0 inset;
+}
+.contact {
+  min-height: 30px;
+  min-width: 700px;
+}
+.contact2{
+  min-height: 100px;
+  min-width: 700px;
+}
+
+.footer{
+  background-color: #EEEEEE; width: 100%; height: 100px; float: right;
+  position: absolute;border-radius: 10px;
+  bottom:0;
+}
+
+.footer_gauche{
+  background:no-repeat;
+  background-size: cover;
+  width:30%;
+  height: 30px; float: left;
+  margin: 5px auto auto 0;
+  position: relative;
+  display: inline;
+  bottom:0;
+}
+
+.footer_droite{
+  background:no-repeat;
+  background-size: cover;
+  width:20%;
+  height: 30px; float: right;
+  margin: 20px 0 auto auto;
+  position: relative;
+  bottom:0;
+}
