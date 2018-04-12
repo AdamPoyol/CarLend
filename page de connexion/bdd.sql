@@ -40,7 +40,6 @@ CREATE TABLE IF NOT EXISTS info_location(
         prix           Int NOT NULL ,
         id_voiture     Int NOT NULL ,
         PRIMARY KEY (id_location )
-)ENGINE=InnoDB
 )ENGINE=InnoDB;
 
 
