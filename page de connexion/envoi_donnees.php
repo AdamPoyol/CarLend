@@ -2,15 +2,15 @@
 
 //Connexion a la bade de données
 
-$bdd = 'Carlend';
+private $bdd = 'Carlend';
 
-$host = "localhost" ;
+private $host = "localhost" ;
 
-$user = "root" ;
+private $user = "root" ;
 
-$mdp = "" ;
+private $mdp = "" ;
 
-$connect = mysql_connect($host, $user, $mdp) ;
+private $connect = mysql_connect($host, $user, $mdp) ;
 
  ?>
 
