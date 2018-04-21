@@ -7,9 +7,11 @@
   src: local('Nunito Regular'), local('Nunito-Regular'), url(https://fonts.gstatic.com/s/nunito/v9/cSNs3NwpEgPVRQzvkh3NeQ.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
+
 body{
   background: white no-repeat;
   background-size: cover;
+  height: 100%;
 }
 
 a{
@@ -17,10 +19,14 @@ a{
 }
 
 .header{
+<<<<<<< HEAD
   background-color: #FFFFFF; width: 100%; height: 100px;
+=======
+  background-color: #FFFFFF; width: 100%; height: 10%;
+>>>>>>> ef36ddef0e3fda01f869ce28076d11f170de616a
   position: relative;
-  bottom: 0;
-  left: 0;
+  /* bottom: 0;
+  left: 0; */
   text-align: right;
 }
 
@@ -28,8 +34,8 @@ a{
   background:no-repeat;
   background-size: cover;
   width:40%;
-  height: 80px; float: left;
-  margin: 20px 20px auto auto;
+  height: 10%; float: left;
+  margin: 2% 2% auto auto;
   position: relative;
   text-align: center;
 }
@@ -38,7 +44,7 @@ a{
   background-color: #777777;
   background-size: cover;
   width:50%;
-  height: 80px; float: left;
+  height: 10%; float: left;
   position: relative;
   text-align: center;
 }
@@ -46,31 +52,34 @@ a{
 .header_gauche_logo{
   background:no-repeat;
   background-size: cover;
-  width:50%;
-  height: 70px; float: right;
+  width: auto;
+  height: 50%; float: right;
 }
 
 .header_droite{
   background:no-repeat;
   background-size: cover;
   width:40%;
-  height: 30px; float: right;
-  margin: 20px 20px auto auto;
+  height: 10%; float: right;
+  margin: 2% 2% auto auto;
   position: relative;
   text-align: right;
 }
 
 .footer{
-  background-color: #EEEEEE; width: 100%; height: 100px; float: right;
-  position: relative;border-radius: 10px;
+  background-color: #EEEEEE; width: 96%; height: 10%;
+  border-radius: 10px; float: right;
+  position:relative;
+  bottom: 0;
+  margin: 5% 2% 2% 2%;
 }
 
 .footer_gauche{
   background:no-repeat;
   background-size: cover;
   width:30%;
-  height: 30px; float: left;
-  margin: 5px auto auto 0;
+  height: 10%; float: left;
+  margin: 0 3% 3% ;
   position: relative;
   text-align: center;
 }
@@ -95,66 +104,52 @@ a{
 {
   border-bottom: 1px solid;
 }
+
 #conteneur_accueil{
-  margin: 0 auto; width: 100%; height:1000px;
+
+  width: 100%; height: 1080px;
 }
 
 .zone1_accueil{
   background:url(../../inc/img/Screen.png) no-repeat;
   background-size: cover;
-  height: 300px; width: auto;
+  border-radius: 10px;
+  width: auto; height: 40%;
   text-align: center;
+<<<<<<< HEAD
   margin: 30px 100px auto 80px;
+=======
+  margin: 2% 10% 2%;
+>>>>>>> ef36ddef0e3fda01f869ce28076d11f170de616a
 }
 
 .zone2_accueil{
   background-color: white;
-  width: 100%; height: 500px;
+  width: 95%; height: 40%;
   position: relative;
+  padding: 2% 2% 20% ;
+  text-align: justify;
+  font-size: 1em;
+
 }
 
 .recherche_accueil{
-  background:white no-repeat;
+  background:#ffffff no-repeat;
   background-size: cover;
   opacity: 0.85;
-  width:40%;
-  height: 72px; float: right;
-  margin: 110px 370px auto auto;
+  width:50%;
+  height: 25%; float: right;
+  margin: 10% 25% 5%;
   border-radius: 10px;
   text-align: center;
 }
 
-.form{
-  margin-top: 1em;
-}
-
-.contact, .contact2, select, option {
-  background-color: transparent;
-}
-.contact, .contact2, select {
-  padding:3px;
-  border:1px solid;
-  border-radius:5px;
-  width:200px;
-  box-shadow:1px 1px 2px #C0C0C0 inset;
-}
-.contact {
-  min-height: 30px;
-  min-width: 700px;
-}
-.contact2{
-  min-height: 100px;
-  min-width: 700px;
-}
 /* LOCATION */
 
 #conteneur_location{
   margin: 0 auto; width: 100%; height:1500px;
 }
 
-#conteneur_location{
-  margin: 0 auto; width: 100%; height:1500px;
-}
 .zone1_location{
   background:url(../../inc/img/Screen.png) no-repeat;
   background-size: cover;

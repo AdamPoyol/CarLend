@@ -12,10 +12,6 @@ private $mdp = "" ;
 
 private $connect = mysql_connect($host, $user, $mdp) ;
 
- ?>
-
- <?php 
-
 
 $Nom=$_POST['Nom'];
 $Prenom=$_POST['Prenom'];
@@ -31,5 +27,10 @@ $copie_permis=$_POST['copie_permis'];
 
 $sql="insert into Locataire (Nom, Prenom, telephone, Adresse, Code_postale, mail, Ville) values ('$Nom','$Prenom', '$telephone', '$Adresse', '$Code_postale', '$mail', '$Ville', '$password')";
 
+ mysql_query('$sql');
+
+//On ferme la connexion
+
+mysql_close();
 
   ?>
