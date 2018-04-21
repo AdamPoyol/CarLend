@@ -103,15 +103,4 @@ if(!empty($_POST['louer_vehicule'])) {
     }
 
 }
-
-// Déconnexion
-
-if(!empty($_POST['deconnexion'])) {
-
-    $_SESSION = array();  // on détruit les variables de session
-
-    session_destroy(); // on détruit la session
-
-    header('Location: index.php');  // on rafraichit la page
-}
 ?>

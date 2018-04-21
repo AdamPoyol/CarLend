@@ -1,54 +1,51 @@
 <?php
-
+require_once("inc/init.inc.php");
 // Inscription
+$_SESSION = array();  // on détruit les variables de session
 
-if(!empty($_POST['inscription'])) {
+session_destroy(); // on détruit la session
 
+if($_POST){
+    debug($_POST);
     // on récupère les données
 
     $identifiant = $_POST['identifiant'];
     $mot_de_passe = $_POST['mot_de_passe'];
-    $prenom = $_POST['prenom'];
     $nom = $_POST['nom'];
+    $prenom = $_POST['prenom'];
     $date_de_naissance = $_POST['date_de_naissance'];
+    $civilite = $_POST['civilite'];
     $telephone = $_POST['telephone'];
     $mail = $_POST['mail'];
     $adresse = $_POST['adresse'];
     $ville = $_POST['ville'];
-    $code_postale = $_POST['code_postale'];
-    $lien_photo = $_POST['lien_photo'];
+    $code_postal = $_POST['code_postal'];
+    $lien_photo = $_FILES['lien_photo']['name'];
+    $lien_permis = $_FILES['lien_permis']['name'];
     $date_adhesion = date("Y-m-d");
 
-    $bdd = new mysqli("localhost", "root", "", "carlend");  // on accède à la bdd
-
-    $requete_verification = $bdd->query("SELECT * FROM connexion"); // on recupere les donnes de connexion
+    $requete_verification = executeRequete("SELECT identifiant, mot_de_passe FROM utilisateur"); // on recupere les donnes de connexion
     $liste_verification = $requete_verification -> fetch_assoc(); // on stock chaque colonne dans une case de tableau
 
     $inscription = TRUE;
+    $erreur = FALSE;
 
     foreach ($requete_verification as $liste_verification){ // on compare les donnes de l'utilisateur avec les données de la bdd
         if ($identifiant == $liste_verification['identifiant']){
             $inscription = FALSE;
         }
-        if ($mot_de_passe == $liste_verification['mot_de_passe']){
-            $inscription = FALSE;
-        }
     }
 
-    if ($inscription == TRUE){ // Si l'identifiant et le mot de passe saisi par l'utilisateur n'existent pas
+    if ($inscription == TRUE){ // Si l'identifiant saisi par l'utilisateur n'existe pas
 
-        $requete_connexion = $bdd->query("INSERT INTO connexion(identifiant, mot_de_passe)VALUES($identifiant, $mot_de_passe)"); // on ajoute les identifiants de l'utilisateur dans la bdd
-        if (!$requete_connexion){
-            $erreur = TRUE;
-        }
-        $requete_utilisateur = $bdd->query("INSERT INTO utilisateur(prenom, nom, date_de_naissance, telephone, mail, adresse, ville, code_postale, lien_photo, date_adhesion) VALUES($prenom, $nom, $date_de_naissance, $telephone, $mail, $adresse, $ville, $code_postale, $lien_photo, $date_adhesion)"); // on ajoute les données de l'utilisateur dans la bdd
+        $requete_utilisateur = executeRequete("INSERT INTO utilisateur(identifiant, mot_de_passe, nom, prenom, date_de_naissance, civilite, telephone, mail, adresse, ville, code_postal, lien_photo, lien_permis, date_adhesion) VALUES('".$identifiant."', '".$mot_de_passe."', '".$nom."', '".$prenom."', '".$date_de_naissance."', '".$civilite."', '".$telephone."', '".$mail."', '".$adresse."', '".$ville."', '".$code_postal."', '".$lien_photo."', '".$lien_permis."', '".$date_adhesion."')"); // on ajoute les données de l'utilisateur dans la bdd
         if (!$requete_utilisateur){
             $erreur = TRUE;
         }
 
         if ($erreur == FALSE){ // si tout c'est bien passé
 
-            $requete_verification = $bdd->query("SELECT * FROM connexion");    // on recupere les donnes de connexion
+            $requete_verification = executeRequete("SELECT identifiant, mot_de_passe, id_utilisateur FROM utilisateur");    // on recupere les donnes de connexion
             $liste_verification = $requete_verification -> fetch_assoc();  // on stock chaque colonne dans une case de tableau
 
             foreach ($requete_verification as $liste_verification){    // on compare les donnes de l'utilisateur avec les données de la bdd
@@ -59,29 +56,90 @@ if(!empty($_POST['inscription'])) {
 
                     session_start();  // on ouvre une session
                     $_SESSION['id_utilisateur'] = $liste_verification['id_utilisateur'];    // on récupère l'id de l'utilisateur
-
                 }
             }
 
             // on enregistre la photo de l'utilisateur
 
-            $dossier = '../donnees_utilisateur/photo_utilisateur/utilisateur'.$_SESSION['id_utilisateur'];
+            $dossier = 'photo/utilisateur'.$_SESSION['id_utilisateur'].'/';
             if (!file_exists($dossier))
             {
                 mkdir($dossier);
             }
-            if(!empty($_FILES['fichier']['name'])) {
 
-                $fichierTemporaire = $_FILES['fichier']['tmp_name'];
-                $nomFichier = $_FILES['fichier']['name'];
+            if(!empty($_FILES['lien_photo']['name'])) {
+                $fichierTemporaire = $_FILES['lien_photo']['tmp_name'];
+                $nomFichier = 'photo.jpg';
                 if (!empty($fichierTemporaire) && is_uploaded_file($fichierTemporaire)) {
-                    move_uploaded_file($fichierTemporaire, $dossier .'/'. $nomFichier);
+                    move_uploaded_file($fichierTemporaire, $dossier . $nomFichier);
+                }
+            }
+            if(!empty($_FILES['lien_permis']['name'])) {
+
+                $fichierTemporaire = $_FILES['lien_permis']['tmp_name'];
+                $nomFichier = 'permis.jpg';
+                if (!empty($fichierTemporaire) && is_uploaded_file($fichierTemporaire)) {
+                    move_uploaded_file($fichierTemporaire, $dossier . $nomFichier);
                 }
             }
 
-            header('Location: index.php'); // on redirige l'utilisateur vers la page d'accueil
+            header('Location: accueil_carlend.php'); // on redirige l'utilisateur vers la page d'accueil
         }
     }
 }
 
+?>
+
+<?php
+include ("inc/header.inc.php");
+?>
+
+<br>
+<form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>" enctype="multipart/form-data">
+
+    <label for="identifiant">Identifiant</label>
+    <input type="text" id="identifiant" name="identifiant" required="required"/><br><br>
+
+    <label for="mot_de_passe">Mot de passe</label>
+    <input type="password" id="mot_de_passe" name="mot_de_passe" required="required"/><br><br>
+
+    <label for="nom">Nom</label>
+    <input type="text" id="nom" name="nom" placeholder="votre nom" required="required"/><br><br>
+
+    <label for="prenom">Prenom</label>
+    <input type="text" id="prenom" name="prenom" placeholder="votre prenom" required="required"/><br><br>
+
+    <label for="date_de_naissance">date de naissance</label>
+    <input type="date" id="date_de_naissance" name="date_de_naissance" placeholder="votre date de naissance" required="required"/><br><br>
+
+    <label for="civilite">Civilité</label>
+    <input type="radio" id="civilite" name="civilite" value="m" checked="checked"/>Homme
+    <input type="radio" id="civilite" name="civilite" value="f"/>Femme<br><br>
+
+    <label for="telephone">Téléphone</label>
+    <input type="text" id="telephone" name="telephone" placeholder="votre numéro de téléphone" required="required"/><br><br>
+
+    <label for="mail">E-mail</label>
+    <input type="email" id="mail" name="mail" placeholder="votre e-mail" required="required"/><br><br>
+
+    <label for="adresse">Adresse</label>
+    <input type="text" id="adresse" name="adresse" placeholder="votre adresse" required="required"/><br><br>
+
+    <label for="ville">Ville</label>
+    <input type="text" id="ville" name="ville" placeholder="votre ville" required="required"/><br><br>
+
+    <label for="cp">Code postal</label>
+    <input type="text" id="cp" name="code_postal" placeholder="votre code postal" required="required"/><br><br>
+
+    <label for="lien_photo">photo identité</label>
+    <input type="file" id="lien_photo" name="lien_photo" placeholder="votre photo d'identité" accept=".jpg" required="required"/><br><br>
+
+    <label for="lien_permis">permis</label>
+    <input type="file" id="lien_permis" name="lien_permis" placeholder="votre permis de conduire" accept=".jpg" required="required"/><br><br>
+
+    <input type="submit" value="s'inscrire" name="inscription"/>
+</form><br>
+
+<?php
+include ("inc/footer.inc.php");
 ?>

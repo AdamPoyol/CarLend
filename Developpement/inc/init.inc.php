@@ -14,6 +14,3 @@ define("RACINE_SITE","/site/");
 $contenu = '';
 
 require_once("fonction.inc.php");
-
-$result = $mysqli->query('SHOW TABLES');
-$listeTables = $result->fetch_assoc();

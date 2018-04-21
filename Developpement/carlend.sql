@@ -1,29 +1,27 @@
 CREATE DATABASE IF NOT EXISTS carlend CHARACTER SET 'utf8';
 USE carlend;
 
-CREATE TABLE IF NOT EXISTS connexion(
-  identifiant VARCHAR(30) NOT NULL,
-  mot_de_passe VARCHAR(32) NOT NULL,
-  id_utilisateur INT(3)
-)ENGINE=INNODB DEFAULT CHARSET=utf8;
-
 CREATE TABLE IF NOT EXISTS utilisateur(
   id_utilisateur INT UNSIGNED AUTO_INCREMENT,
+  identifiant VARCHAR(30) NOT NULL,
+  mot_de_passe VARCHAR(32) NOT NULL,
   nom VARCHAR(20) NOT NULL,
   prenom VARCHAR(20) NOT NULL,
   date_de_naissance DATE NOT NULL,
+  civilite ENUM('m','f') NOT NULL,
   telephone VARCHAR(20) NOT NULL,
+  mail VARCHAR(256) NOT NULL,
   adresse VARCHAR(70) NOT NULL,
-  mail VARCHAR(50) NOT NULL,
-  code_postal VARCHAR(5) UNSIGNED ZEROFILL NOT NULL,
   ville VARCHAR(20) NOT NULL,
+  code_postal VARCHAR(5) NOT NULL,
+  lien_photo VARCHAR(250) NOT NULL,
+  lien_permis VARCHAR(250) NOT NULL,
   date_adhesion DATE NOT NULL,
-  lien_photo VARCHAR(250),
   CONSTRAINT pk_utilisateur PRIMARY KEY (id_utilisateur)
 )ENGINE=INNODB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS vehicule(
-  id_vehicule INT(3)AUTO_INCREMENT NOT NULL,
+  id_vehicule INT UNSIGNED AUTO_INCREMENT,
   id_utilisateur INT UNSIGNED NULL DEFAULT NULL,
   immatriculation VARCHAR(10) NOT NULL,
   marque VARCHAR(30) NOT NULL ,
@@ -49,11 +47,6 @@ CREATE TABLE IF NOT EXISTS location(
   CONSTRAINT pk_location PRIMARY KEY(id_location)
 )ENGINE=INNODB DEFAULT CHARSET=utf8;
 
-ALTER TABLE connexion
-  ADD CONSTRAINT fk_connexion_utilisateur
-FOREIGN KEY (id_utilisateur)
-REFERENCES utilisateur(id_utilisateur);
-
 ALTER TABLE vehicule
   ADD CONSTRAINT fk_vehicule_utilisateur
 FOREIGN KEY (id_utilisateur)
@@ -78,6 +71,3 @@ ALTER TABLE location
   ADD CONSTRAINT fk_location_vehicule
 FOREIGN KEY (id_vehicule)
 REFERENCES vehicule(id_vehicule);
-
-INSERT INTO utilisateur
-VALUES('1','ACQUART','Antoine','1999-05-26','06.06.06.06.06','123 ynov','antoine.acquart@ynov.com','13880','Velaux','2018-03-17','antoine.png');

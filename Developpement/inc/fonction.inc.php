@@ -1,7 +1,7 @@
 <?php
 
 function executeRequete($req){
-    global $mysqli;
+    $mysqli = new mysqli("localhost", "root", "", "carlend");  // on accède à la bdd
     $resultat = $mysqli->query($req);
     if(!$resultat) die("erreur sur la requete sql.<br>Message :".$mysqli->error."<br>Code :".$req);
     return $resultat;
