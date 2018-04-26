@@ -1,4 +1,6 @@
-/* COMMUN */
+*{
+  margin: 0;
+}
 
 @font-face {
   font-family: 'Nunito';
@@ -111,10 +113,11 @@ a{
   background:url(../../inc/img/Screen.png) no-repeat;
   background-size: cover;
   border-radius: 10px;
+  
   width: auto; height: 40%;
   text-align: center;
   /*margin: 30px 100px auto 80px;*/
-  margin: 2% 10% 2%;
+  
 }
 
 .zone2_accueil{
