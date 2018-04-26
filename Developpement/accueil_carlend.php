@@ -118,6 +118,7 @@ if(!empty($_POST['louer_vehicule'])) {
         </div>
     </div>
     <div class="zone2_accueil">
+<<<<<<< HEAD
         <br>
         <h1>Chercher un véhicule :</h1>
 
@@ -129,6 +130,9 @@ if(!empty($_POST['louer_vehicule'])) {
 
         <p>4.Une fois votre véhicule choisi vous cliquerer sur contacter le propriétaire pour pouvoir lui envoyer une requête.</p>
 
+=======
+
+>>>>>>> 06052a07280cbcfa906dd9f37855dacc7cdace6b
     </div>
 </div>
 <?php
