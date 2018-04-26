@@ -97,7 +97,7 @@ include ("inc/header.inc.php");
 <br>
 
 
-<div class="row">
+<section class="row" id="content">
     <form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>" enctype="multipart/form-data" class="inscrip">
         <table class="tableinscrip">
             <tr>
@@ -213,10 +213,10 @@ include ("inc/header.inc.php");
                 <td>
                     <input type="submit" value="S'inscrire" name="inscription"/>
                 </td>
-            </tr>
+            </tr><br>
         </table>
     </form><br>
-</div>
+</section>
 
 <?php
 include ("inc/footer.inc.php");
