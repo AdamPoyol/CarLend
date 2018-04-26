@@ -95,50 +95,128 @@ include ("inc/header.inc.php");
 ?>
 
 <br>
-<form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>" enctype="multipart/form-data">
 
-    <label for="identifiant">Identifiant</label>
-    <input type="text" id="identifiant" name="identifiant" required="required"/><br><br>
 
-    <label for="mot_de_passe">Mot de passe</label>
-    <input type="password" id="mot_de_passe" name="mot_de_passe" required="required"/><br><br>
+<div class="row">
+    <form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>" enctype="multipart/form-data" class="inscrip">
+        <table class="tableinscrip">
+            <tr>
+                <td>
+                    <label for="identifiant">Identifiant</label>
+                </td>
+                <td>
+                    <input type="text" id="identifiant" name="identifiant" required="required" placeholder="Votre identifiant"/><br><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="mot_de_passe">Mot de passe</label>
+                </td>
+                <td>
+                    <input type="password" id="mot_de_passe" name="mot_de_passe" required="required" placeholder="************"/><br><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="nom">Nom</label>
+                </td>
+                <td>
+                    <input type="text" id="nom" name="nom" placeholder="Votre nom" required="required"/><br><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="prenom">Prenom</label>
+                </td>
+                <td>
+                    <input type="text" id="prenom" name="prenom" placeholder="Votre prenom" required="required"/><br><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="date_de_naissance">Date de naissance</label>
+                </td>
+                <td>
+                    <input type="date" id="date_de_naissance" name="date_de_naissance" placeholder="Votre date de naissance" required="required"/><br><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="civilite">Civilité</label>
+                </td>
+                <td>
+                    <input type="radio" id="civilite" name="civilite" value="m" checked="checked"/>Homme
+                    <input type="radio" id="civilite" name="civilite" value="f"/>Femme<br><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="telephone">Téléphone</label>
+                </td>
+                <td>
+                    <input type="text" id="telephone" name="telephone" placeholder="Votre numéro de téléphone" required="required"/><br><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="mail">E-mail</label>
+                </td>
+                <td>
+                    <input type="email" id="mail" name="mail" placeholder="Votre e-mail" required="required"/><br><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="adresse">Adresse</label>
+                </td>
+                <td>
+                    <input type="text" id="adresse" name="adresse" placeholder="Votre adresse" required="required"/><br><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="ville">Ville</label>
+                </td>
+                <td>
+                    <input type="text" id="ville" name="ville" placeholder="Votre ville" required="required"/><br><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="cp">Code postal</label>
+                </td>
+                <td>
+                    <input type="text" id="cp" name="code_postal" placeholder="Votre code postal" required="required"/><br><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="lien_photo">Photo d'identité</label>
+                </td>
 
-    <label for="nom">Nom</label>
-    <input type="text" id="nom" name="nom" placeholder="votre nom" required="required"/><br><br>
+                <td>
+                    <input type="file" id="lien_photo" name="lien_photo" placeholder="Votre photo d'identité" accept=".jpg" required="required"/><br><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="lien_permis">Permis de conduire</label>
+                </td>
+                <td>
+                    <input type="file" id="lien_permis" name="lien_permis" placeholder="Votre permis de conduire" accept=".jpg" required="required"/><br><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
 
-    <label for="prenom">Prenom</label>
-    <input type="text" id="prenom" name="prenom" placeholder="votre prenom" required="required"/><br><br>
-
-    <label for="date_de_naissance">date de naissance</label>
-    <input type="date" id="date_de_naissance" name="date_de_naissance" placeholder="votre date de naissance" required="required"/><br><br>
-
-    <label for="civilite">Civilité</label>
-    <input type="radio" id="civilite" name="civilite" value="m" checked="checked"/>Homme
-    <input type="radio" id="civilite" name="civilite" value="f"/>Femme<br><br>
-
-    <label for="telephone">Téléphone</label>
-    <input type="text" id="telephone" name="telephone" placeholder="votre numéro de téléphone" required="required"/><br><br>
-
-    <label for="mail">E-mail</label>
-    <input type="email" id="mail" name="mail" placeholder="votre e-mail" required="required"/><br><br>
-
-    <label for="adresse">Adresse</label>
-    <input type="text" id="adresse" name="adresse" placeholder="votre adresse" required="required"/><br><br>
-
-    <label for="ville">Ville</label>
-    <input type="text" id="ville" name="ville" placeholder="votre ville" required="required"/><br><br>
-
-    <label for="cp">Code postal</label>
-    <input type="text" id="cp" name="code_postal" placeholder="votre code postal" required="required"/><br><br>
-
-    <label for="lien_photo">photo identité</label>
-    <input type="file" id="lien_photo" name="lien_photo" placeholder="votre photo d'identité" accept=".jpg" required="required"/><br><br>
-
-    <label for="lien_permis">permis</label>
-    <input type="file" id="lien_permis" name="lien_permis" placeholder="votre permis de conduire" accept=".jpg" required="required"/><br><br>
-
-    <input type="submit" value="s'inscrire" name="inscription"/>
-</form><br>
+                </td>
+                <td>
+                    <input type="submit" value="S'inscrire" name="inscription"/>
+                </td>
+            </tr>
+        </table>
+    </form><br>
+</div>
 
 <?php
 include ("inc/footer.inc.php");
