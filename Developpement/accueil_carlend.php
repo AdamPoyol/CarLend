@@ -67,7 +67,6 @@
 
 				Chaque membre du site devra se créer un compte pour pouvoir profiter des services du site, sous-entendu: louer un véhicule et mettre en location son véhicule, ainsi que visiter les différentes offres.
 
-<<<<<<< HEAD
 				6. Droits
 
 				Administrateurs: les Administrateur seront les personnes qui auront tous les droits sur le site: ajouter/modifier le contenu, gérer des paramètres privés des comptes tel que les changements de mot de passe (avec l'approbation des utilisateurs seulement). Ils auront le plein pouvoir sur le back office et seront autorisés à supprimer les comptes des utilisateur "indésirable".
@@ -126,44 +125,3 @@
         <?php
         require_once("inc/footer.inc.php");
         ?>
-=======
-    if (!$requete_location){
-        $erreur = TRUE;
-    }
-
-}
-
-?>
-
-<div id="conteneur_accueil">
-    <div class="zone1_accueil">
-        <div class="recherche">
-            <form method="POST" action="<?php echo $_SERVER["PHP_SELF"]; ?>"><br>
-                <input id="modele" type="text" name="prix_max" placeholder="Prix maximum" class="form"/>
-                <input id="ville" type="text" name="ville" placeholder="Ville" class="form"/>
-                <input type="submit" value="Rechercher" name="rechercher_vehicule" class="form"/>
-            </form>
-        </div>
-    </div>
-    <div class="zone2_accueil">
-<<<<<<< HEAD
-        <br>
-        <h1>Chercher un véhicule :</h1>
-
-        <p>1.Pour chercher un véhicule il vous suffit de remplir les filtres suivant "Marque", "Modèle" et la "Ville".</p>
-
-        <p>2.Notre algorithme va vous chercher tous les véhicules réportorier dans notre base de donnée.</p>
-
-        <p>3.Il vous restera plus qu'a choisir un véhicule.</p>
-
-        <p>4.Une fois votre véhicule choisi vous cliquerer sur contacter le propriétaire pour pouvoir lui envoyer une requête.</p>
-
-=======
-
->>>>>>> 06052a07280cbcfa906dd9f37855dacc7cdace6b
-    </div>
-</div>
-<?php
-require_once("inc/footer.inc.php");
-?>
->>>>>>> a3bc03cd5fdc8f45be49c72f0e315cfef4772339
