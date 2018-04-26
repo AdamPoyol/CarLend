@@ -19,11 +19,8 @@ a{
 }
 
 .header{
-<<<<<<< HEAD
-  background-color: #FFFFFF; width: 100%; height: 100px;
-=======
+  /*background-color: #FFFFFF; width: 100%; height: 100px;*/
   background-color: #FFFFFF; width: 100%; height: 10%;
->>>>>>> ef36ddef0e3fda01f869ce28076d11f170de616a
   position: relative;
   /* bottom: 0;
   left: 0; */
@@ -116,11 +113,8 @@ a{
   border-radius: 10px;
   width: auto; height: 40%;
   text-align: center;
-<<<<<<< HEAD
-  margin: 30px 100px auto 80px;
-=======
+  /*margin: 30px 100px auto 80px;*/
   margin: 2% 10% 2%;
->>>>>>> ef36ddef0e3fda01f869ce28076d11f170de616a
 }
 
 .zone2_accueil{
