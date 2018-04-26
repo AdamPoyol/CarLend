@@ -69,7 +69,6 @@ require_once("inc/header.inc.php");
           <p>Etape 2: Vous tomberer sur un formulaire à remplir puis vous cliquer sur "Envoyer".</p>
 
           <p>Etape 3: Votre véhicule sera à présent sur notre site.</p>
-          
       </div>
       <?php
     require_once("inc/footer.inc.php");
