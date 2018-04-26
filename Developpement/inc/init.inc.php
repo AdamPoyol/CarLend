@@ -1,5 +1,5 @@
 <?php
-$mysqli = new Mysqli("localhost", "root", "root", "carlend");
+$mysqli = new Mysqli("localhost", "root", "", "carlend");
 
 if($mysqli->connect_error) die("Un problème est survenu lors de la tentativer de connexion à la BDD : ".$mysqli->connect_error);
 
