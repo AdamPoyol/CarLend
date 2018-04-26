@@ -12,12 +12,12 @@ echo "<!DOCTYPE html>
 		<div id=\"conteneur_accueil\">
 			<div class=\"header\">
 					<div class=\"header_gauche\">
+					<div class=\"header_gauche_logo\">
+							<a href='accueil_carlend.php'><img id=\"CarLend\" src=\"inc/img/logo.png\" alt=\"logo CarLend\"/></a>
+						</div>
 						<div class=\"header_gauche_menu\">
 							<a href=\"accueil_carlend.php\">Accueil</a><br><br>
 								<a href=\"location_carlend.php\">Louer mon véhicules</a><br>
-						</div>
-						<div class=\"header_gauche_logo\">
-							<a href='accueil_carlend.php'><img id=\"CarLend\" src=\"inc/img/logo.png\" alt=\"logo CarLend\"/></a>
 						</div>
 					</div>
 					<div class=\"header_droite\">
