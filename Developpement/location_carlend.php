@@ -56,19 +56,9 @@ require_once("inc/header.inc.php");
           <input type="submit" value="Etape suivante"/>
         </div>
 			</div>
-
 			<div class="clear"></div>
-
       <div class="zone3_location">
-        <h1>Comment faire ?</h1>
-
-          <h2>Propriétaire déposer un véhicule</h2>
-
-          <p>Etape 1: Pour déposer son véhicule il suffit de cliquer sur "Déposer mon véhicule".</p>
-
-          <p>Etape 2: Vous tomberer sur un formulaire à remplir puis vous cliquer sur "Envoyer".</p>
-
-          <p>Etape 3: Votre véhicule sera à présent sur notre site.</p>
+        <h2>Comment faire ?</h2>
       </div>
       <?php
     require_once("inc/footer.inc.php");
