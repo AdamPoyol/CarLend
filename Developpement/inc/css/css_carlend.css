@@ -189,20 +189,12 @@ a{
 }
 
 .inscrip {
-  margin: 6em 6em 6em 30em;
+  margin: 3em 15em 0 19em;
+  background-color: #EEEEEE;
+  border-radius: 50px;
 }
 
 .tableinscrip{
-  width: 100%;
-  border-spacing: 6px;
-}
-
-.zone3_location{
-  text-align: center;
-  color: #b5272e;
-}
-
-.zone2_accueil{
-  text-align: center;
-  color: #b5272e;
+  margin-left: 17em;
+  border-spacing: 20px 5px;
 }
