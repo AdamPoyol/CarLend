@@ -28,10 +28,10 @@ if(!empty($_POST['connexion'])) {
             session_start(); // on ouvre une session
         }
         $_SESSION['id_utilisateur'] = $liste_verification['id_utilisateur'];    // on récupère l'id de l'utilisateur
-        header('Location: accueil_carlend.php'); // on redirige l'utilisateur vers la page d'accueil
+        header('Location: accueil.php'); // on redirige l'utilisateur vers la page d'accueil
     }
     else{
-        header('Location: accueil_carlend.php'); // on redirige l'utilisateur vers la page d'accueil
+        header('Location: accueil.php'); // on redirige l'utilisateur vers la page d'accueil
     }
 }
 

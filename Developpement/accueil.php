@@ -1,14 +1,15 @@
 <?php
+require_once("inc/header.inc.php");
+
 
 if(!empty($_POST['rechercher_vehicule'])) {
     $ville = $_POST['ville'];
-    $marque = $_POST['marque'];
-    $modele = $_POST['modele'];
+    $prix_max = $_POST['prix_max'];
 
     $bdd = new mysqli("localhost", "root", "", "carlend");     // on accède à la bdd
 
-    if ($marque =! '' and $modele != ''){
-        $requete_recherche_vehicule = $bdd->query("SELECT * FROM vehicule WHERE ville=" . $ville . " AND marque=" . $marque . " AND modele=" . $modele);
+    if ($ville =! ''){
+        $requete_recherche_vehicule = $bdd->query("SELECT * FROM vehicule WHERE ville=" . $ville . " AND prix<=" . $prix_max);
         if (!$requete_recherche_vehicule){
             $erreur = 'Pas de véhicule correspondant à ces critères';
         }
@@ -22,7 +23,7 @@ if(!empty($_POST['rechercher_vehicule'])) {
     $liste_recherche_vehicule = $requete_recherche_vehicule -> fetch_assoc();  // on stock chaque colonne dans une case de tableau
 
     foreach ($requete_recherche_vehicule as $liste_recherche_vehicule){
-        echo $liste_recherche_vehicule['marque'] . ' ' . $liste_recherche_vehicule['modele'] . ' ' . $liste_recherche_vehicule['ville'] . '<br><img src="' . $liste_recherche_vehicule['lien_photo'] . '">';
+        echo $liste_recherche_vehicule['marque'] . ' ' . $liste_recherche_vehicule['modele'] . ' ' . $liste_recherche_vehicule['ville'] . ' ' . $liste_recherche_vehicule['prix'] . '<br><img src="' . $liste_recherche_vehicule['lien_photo'] . '">';
     }
 }
 
@@ -103,4 +104,34 @@ if(!empty($_POST['louer_vehicule'])) {
     }
 
 }
+
+?>
+
+<div id="conteneur_accueil">
+    <div class="zone1_accueil">
+        <div class="recherche">
+            <form method="POST" action="<?php echo $_SERVER["PHP_SELF"]; ?>"><br>
+                <input id="modele" type="text" name="prix_max" placeholder="Prix maximum" class="form"/>
+                <input id="ville" type="text" name="ville" placeholder="Ville" class="form"/>
+                <input type="submit" value="Rechercher" name="rechercher_vehicule" class="form"/>
+            </form>
+        </div>
+    </div>
+    <div class="zone2_accueil">
+
+        <br>
+        <h1>Chercher un véhicule :</h1>
+
+        <p>1.Pour chercher un véhicule il vous suffit de remplir les filtres suivant "Marque", "Modèle" et la "Ville".</p>
+
+        <p>2.Notre algorithme va vous chercher tous les véhicules réportorier dans notre base de donnée.</p>
+
+        <p>3.Il vous restera plus qu'a choisir un véhicule.</p>
+
+        <p>4.Une fois votre véhicule choisi vous cliquerer sur contacter le propriétaire pour pouvoir lui envoyer une requête.</p>
+
+    </div>
+</div>
+<?php
+require_once("inc/footer.inc.php");
 ?>

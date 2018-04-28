@@ -83,7 +83,7 @@ if($_POST){
                 }
             }
 
-            header('Location: accueil_carlend.php'); // on redirige l'utilisateur vers la page d'accueil
+            header('Location: accueil.php'); // on redirige l'utilisateur vers la page d'accueil
         }
     }
 }

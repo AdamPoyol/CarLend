@@ -13,10 +13,10 @@ echo "<!DOCTYPE html>
 			<div class=\"header\">
 					<div class=\"header_gauche\">
 					<div class=\"header_gauche_logo\">
-							<a href='accueil_carlend.php'><img id=\"CarLend\" src=\"inc/img/logo.png\" alt=\"logo CarLend\"/></a>
+							<a href='accueil.php'><img id=\"CarLend\" src=\"inc/img/logo.png\" alt=\"logo CarLend\"/></a>
 						</div>
 						<div class=\"header_gauche_menu\">
-							<a href=\"accueil_carlend.php\">Accueil</a><br><br>
+							<a href=\"accueil.php\">Accueil</a><br><br>
 								<a href=\"ajout_vehicule.php\">Louer mon véhicules</a><br>
 						</div>
 					</div>
@@ -53,7 +53,7 @@ if(!empty($_POST['deconnexion'])) {
 
     session_destroy(); // on détruit la session
 
-    header('Location: accueil_carlend.php');  // on redirige l'utilisateur vers la page d'accueil
+    header('Location: accueil.php');  // on redirige l'utilisateur vers la page d'accueil
 }
 
 ?>
