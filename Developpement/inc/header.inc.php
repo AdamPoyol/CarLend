@@ -5,7 +5,7 @@ echo "<!DOCTYPE html>
 	<head>
 		<meta charset=\"utf-8\">
 		<title>Accueil</title>
-		<link rel=\"stylesheet\" href=\"inc/css/css_carlend.css\">
+		<link rel=\"stylesheet\" href=\"inc/css/carlend.css\">
 		<script src=\"inc/js/js_carlend.js\" type=\"text/javascript\"></script>
 	</head>
 	<body>
