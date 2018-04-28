@@ -1,6 +1,6 @@
 
 <?php
-    require_once("../inc/header.inc.php");
+    require_once("inc/header.inc.php");
 ?>
         <div class = "conteneur_contact">
             <h2> Envoyer une demande </h2>
@@ -30,5 +30,5 @@
             </form>
         </div>
 <?php
-require_once("../inc/footer.inc.php");
+require_once("inc/footer.inc.php");
 ?>

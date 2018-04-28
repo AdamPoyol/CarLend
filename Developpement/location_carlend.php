@@ -31,27 +31,7 @@ require_once("inc/header.inc.php");
             <option >Choisir un modèle</option>
           </select>
 
-          <select class="annee" name="annee">
-            <option >Choisir une année</option>
-            <optgroup label="">
-              <option >2018</option>
-              <option >2017</option>
-              <option >2016</option>
-              <option >2015</option>
-              <option >2014</option>
-              <option >2013</option>
-              <option >2012</option>
-              <option >2011</option>
-              <option >2010</option>
-              <option >2009</option>
-              <option >2008</option>
-              <option >2007</option>
-              <option >2006</option>
-              <option >2005</option>
-              <option >2004</option>
-              <option > . . . </option>
-            </optgroup>
-          </select>
+          <input type="text" name="annee" placeholder="année"/>
 
           <input type="submit" value="Etape suivante"/>
         </div>
