@@ -17,7 +17,7 @@ echo "<!DOCTYPE html>
 						</div>
 						<div class=\"header_gauche_menu\">
 							<a href=\"accueil_carlend.php\">Accueil</a><br><br>
-								<a href=\"location_carlend.php\">Louer mon véhicules</a><br>
+								<a href=\"ajout_vehicule.php\">Louer mon véhicules</a><br>
 						</div>
 					</div>
 					<div class=\"header_droite\">
