@@ -149,8 +149,8 @@ include ("inc/header.inc.php");
                         <label for="boite_vitesse">Boite de vitesse</label>
                     </td>
                     <td>
-                        <input type="radio" name="boite_vitesse" value="m" checked="checked"/>Manuelle
-                        <input type="radio" name="boite_vitesse" value="a"/>Automatique<br><br>
+                        <input type="radio" name="boite_vitesse" value="manuelle" checked="checked"/>Manuelle
+                        <input type="radio" name="boite_vitesse" value="automatique"/>Automatique<br><br>
                     </td>
                 </tr>
                 <tr>
@@ -179,7 +179,7 @@ include ("inc/header.inc.php");
                 </tr>
                 <tr>
                     <td>
-                        <label for="prix">Prix à la demi-journée</label>
+                        <label for="prix">Prix par jour</label>
                     </td>
                     <td>
                         <input type="text" name="prix" placeholder="prix en €" required="required"/>

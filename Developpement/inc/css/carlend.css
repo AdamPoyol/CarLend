@@ -204,9 +204,17 @@ a{
 /* RECHERCHE DE VEHICULE */
 
 .vehicule{
-    border:1px solid black;
+    border:1px solid  #f0f0f0;
+    margin: auto;
+    overflow : hidden;
 }
 
 .vehicule img{
-    height: 100px; width: auto;
+    height: 120px; width: auto;
+}
+
+.vehicule .info{
+    float: left;
+    margin: 1% 5% 1% 5%;
+    border: 1px solid  #f0f0f0;
 }
