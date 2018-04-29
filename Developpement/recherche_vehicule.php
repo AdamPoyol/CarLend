@@ -1,8 +1,6 @@
 <?php
 require_once("inc/header.inc.php");
 
-echo'<input type="button" value="page précédente" onclick="javascript:history.back()">';
-
 if(isset($_GET['ville']) && isset($_GET['prix_max'])) {
     $ville = $_GET['ville'];
     $prix_max = $_GET['prix_max'];

@@ -93,7 +93,6 @@ if($_POST){
 include ("inc/header.inc.php");
 ?>
 
-<input type="button" value="page précédente" onclick="javascript:history.back()">
 <section class="row" id="content">
     <form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>" enctype="multipart/form-data" class="inscrip">
         <table class="tableinscrip">

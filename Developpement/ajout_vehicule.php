@@ -78,7 +78,6 @@ include ("inc/header.inc.php");
     <div class="zone1_location">
     </div>
     <div class="clear"></div><br>
-    <input type="button" value="page précédente" onclick="javascript:history.back()">
 
         <section class="row" id="content">
         <?php
