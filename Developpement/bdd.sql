@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS utilisateur(
 CREATE TABLE IF NOT EXISTS vehicule(
   id_vehicule INT UNSIGNED AUTO_INCREMENT,
   id_utilisateur INT UNSIGNED NULL DEFAULT NULL,
-  immatriculation VARCHAR(10) NOT NULL,
+  immatriculation VARCHAR(10) NOT NULL
   marque VARCHAR(30) NOT NULL,
   modele VARCHAR(30) NOT NULL,
   annee VARCHAR(4) NOT NULL,

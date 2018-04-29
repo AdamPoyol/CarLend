@@ -77,8 +77,10 @@ include ("inc/header.inc.php");
     <div class="conteneur_location">
     <div class="zone1_location">
     </div>
-    <div class="clear"></div>
-    <section class="row" id="content">
+    <div class="clear"></div><br>
+    <input type="button" value="page précédente" onclick="javascript:history.back()">
+
+        <section class="row" id="content">
         <?php
         if(isset($_SESSION['id_utilisateur'])) {
             echo '

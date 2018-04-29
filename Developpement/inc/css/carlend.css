@@ -121,9 +121,8 @@ a{
 
 .zone2_accueil{
   background-color: white;
-  width: 95%; height: 40%;
+  height: auto;
   position: relative;
-  padding: 2% 2% 20% ;
   text-align: justify;
   font-size: 1em;
 
