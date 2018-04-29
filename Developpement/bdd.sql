@@ -33,6 +33,7 @@ CREATE TABLE IF NOT EXISTS vehicule(
   boite_vitesse ENUM('m','a') NOT NULL,
   nb_porte INT NOT NULL,
   nb_place INT NOT NULL,
+  prix INT(4) NOT NULL,
   date_mise_en_location DATE NOT NULL,
   CONSTRAINT pk_vehicule PRIMARY KEY(id_vehicule)
 )ENGINE=INNODB DEFAULT CHARSET=utf8;
@@ -48,18 +49,6 @@ CREATE TABLE IF NOT EXISTS facture(
   CONSTRAINT pk_facture PRIMARY KEY(id_facture)
 )ENGINE=INNODB DEFAULT CHARSET=utf8;
 
-CREATE TABLE tarif(
-  id_tarif INT UNSIGNED AUTO_INCREMENT,
-  marque VARCHAR(30) NOT NULL,
-  modele VARCHAR(30) NOT NULL,
-  puissance INT NOT NULL,
-  puissance_fiscale INT NOT NULL,
-  annee_vehicule DATE NOT NULL,
-  prix INT NOT NULL,
-  CONSTRAINT pk_tarif PRIMARY KEY(id_tarif)
-)ENGINE=INNODB DEFAULT CHARSET=utf8;
-
 ALTER TABLE vehicule ADD CONSTRAINT fk_vehicule_utilisateur FOREIGN KEY (id_utilisateur) REFERENCES utilisateur(id_utilisateur);
 ALTER TABLE facture ADD CONSTRAINT fk_facture_utilisateur FOREIGN KEY (id_utilisateur) REFERENCES utilisateur(id_utilisateur);
 ALTER TABLE facture ADD CONSTRAINT fk_facture_vehicule FOREIGN KEY (id_vehicule) REFERENCES vehicule(id_vehicule);
-ALTER TABLE facture ADD CONSTRAINT fk_facture_tarif FOREIGN KEY (id_tarif) REFERENCES tarif(id_tarif);

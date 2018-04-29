@@ -69,6 +69,7 @@ if($_POST){
                 $nomFichier = 'photo.jpg';
                 if (!empty($fichierTemporaire) && is_uploaded_file($fichierTemporaire)) {
                     move_uploaded_file($fichierTemporaire, $dossier . $nomFichier);
+                    $requete_renommage = executeRequete("UPDATE utilisateur SET lien_photo='".$dossier . $nomFichier ."' WHERE id_utilisateur=".$_SESSION['id_utilisateur']);
                 }
             }
             if(!empty($_FILES['lien_permis']['name'])) {
@@ -77,6 +78,7 @@ if($_POST){
                 $nomFichier = 'permis.jpg';
                 if (!empty($fichierTemporaire) && is_uploaded_file($fichierTemporaire)) {
                     move_uploaded_file($fichierTemporaire, $dossier . $nomFichier);
+                    $requete_renommage = executeRequete("UPDATE utilisateur SET lien_permis='".$dossier . $nomFichier ."' WHERE id_utilisateur=".$_SESSION['id_utilisateur']);
                 }
             }
 

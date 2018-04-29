@@ -17,6 +17,7 @@ if($_POST){
     $nb_porte = $_POST['nb_porte'];
     $nb_place = $_POST['nb_place'];
     $lien_photo = $_FILES['lien_photo']['name'];
+    $prix = $_POST['prix'];
     $date_mise_en_location = date("Y-m-d");
 
 
@@ -34,7 +35,7 @@ if($_POST){
 
     if ($ajout == TRUE){ // Si l'immatriculation saisi par l'utilisateur n'existe pas
 
-        $requete_vehicule = executeRequete("INSERT INTO vehicule(id_utilisateur, immatriculation, marque, modele,annee, puissance_fiscale, energie, boite_vitesse, nb_porte, nb_place, lien_photo, date_mise_en_location) VALUES('".$id_utilisateur."', '".$immatriculation."', '".$marque."', '".$modele."', '".$annee."', '".$puissance_fiscale."', '".$energie."', '".$boite_vitesse."', '".$nb_porte."', '".$nb_place."', '".$lien_photo."', '".$date_mise_en_location."')"); // on ajoute les données du véhicule dans la bdd
+        $requete_vehicule = executeRequete("INSERT INTO vehicule(id_utilisateur, immatriculation, marque, modele,annee, puissance_fiscale, energie, boite_vitesse, nb_porte, nb_place, lien_photo, prix, date_mise_en_location) VALUES('".$id_utilisateur."', '".$immatriculation."', '".$marque."', '".$modele."', '".$annee."', '".$puissance_fiscale."', '".$energie."', '".$boite_vitesse."', '".$nb_porte."', '".$nb_place."', '".$lien_photo."', '".$prix."', '".$date_mise_en_location."')"); // on ajoute les données du véhicule dans la bdd
         if (!$requete_vehicule){
             $erreur = TRUE;
         }
@@ -55,9 +56,10 @@ if($_POST){
 
             if(!empty($_FILES['lien_photo']['name'])) {
                 $fichierTemporaire = $_FILES['lien_photo']['tmp_name'];
-                $nomFichier = 'photo.jpg';
+                $nomFichier = $immatriculation.'.jpg';
                 if (!empty($fichierTemporaire) && is_uploaded_file($fichierTemporaire)) {
                     move_uploaded_file($fichierTemporaire, $dossier . $nomFichier);
+                    $requete_renommage = executeRequete("UPDATE vehicule SET lien_photo='".$dossier . $nomFichier ."' WHERE immatriculation='".$immatriculation."'");
                 }
             }
 
@@ -173,6 +175,14 @@ include ("inc/header.inc.php");
                     </td>
                     <td>
                         <input type="file" name="lien_photo" placeholder="Une photo du véhicule" accept=".jpg" required="required"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="prix">Prix à la demi-journée</label>
+                    </td>
+                    <td>
+                        <input type="text" name="prix" placeholder="prix en €" required="required"/>
                     </td>
                 </tr>
                 <tr>

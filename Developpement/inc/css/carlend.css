@@ -200,3 +200,13 @@ a{
   margin-left: 17em;
   border-spacing: 20px 5px;
 }
+
+/* RECHERCHE DE VEHICULE */
+
+.vehicule{
+    border:1px solid black;
+}
+
+.vehicule img{
+    height: 100px; width: auto;
+}
