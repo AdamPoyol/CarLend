@@ -1,9 +1,6 @@
 <?php
 require_once("inc/init.inc.php");
 // Inscription
-$_SESSION = array();  // on détruit les variables de session
-
-session_destroy(); // on détruit la session
 
 if($_POST){
     debug($_POST);
