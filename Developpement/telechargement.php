@@ -17,7 +17,7 @@ if(isset($_GET['table'])){
             $tableauRequete[] = implode(";", $requete);
         }
         $tableauRequete = implode("\r", $tableauRequete);
-        $fichier = $table.'_'.$bdd.'.csv';
+        $fichier = $table.'_carlend.csv';
 
         header("Content-Disposition: attachment; filename=$fichier");
         header("Content-Type: application/vnd.ms-excel");

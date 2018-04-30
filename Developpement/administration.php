@@ -241,9 +241,12 @@ if (isset($_SESSION['id_utilisateur'])){
 
     }
     else{
-        echo "vous n'avez pas les droits pour accèder à cette page";
+        echo "<div class='admin'>Erreur</div>";
     }
 }
+else{
+        echo "<div class='admin'>vous n'avez pas les droits pour accèder à cette page</div>";
+    }
 
 include ("inc/footer.inc.php");
 
