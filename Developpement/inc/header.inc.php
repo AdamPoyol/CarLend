@@ -18,6 +18,16 @@ echo "<!DOCTYPE html>
 						<div class=\"header_gauche_menu\">
 							<a href=\"accueil.php\">Accueil</a><br><br>
 								<a href=\"ajout_vehicule.php\">Louer mon véhicules</a><br><br>
+								";
+if (isset($_SESSION['id_utilisateur'])){
+    $requete_utilisateur = executeRequete("SELECT identifiant, mot_de_passe FROM utilisateur WHERE id_utilisateur=".$_SESSION['id_utilisateur']);
+    $liste_utilisateur = $requete_utilisateur -> fetch_assoc();
+
+    if ($liste_utilisateur['identifiant'] == 'administrateur' && $liste_utilisateur['mot_de_passe'] == 'admin1234'){
+        echo "<a href=\"administration.php\"><strong>administration</strong></a><br><br>";
+    }
+}
+echo "
 								<input type=\"button\" value=\"page précédente\" onclick=\"javascript:history.back()\">
 
 						</div>

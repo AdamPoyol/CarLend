@@ -23,11 +23,11 @@ CREATE TABLE IF NOT EXISTS utilisateur(
 CREATE TABLE IF NOT EXISTS vehicule(
   id_vehicule INT UNSIGNED AUTO_INCREMENT,
   id_utilisateur INT UNSIGNED NULL DEFAULT NULL,
-  immatriculation VARCHAR(10) NOT NULL
+  immatriculation VARCHAR(10) NOT NULL,
   marque VARCHAR(30) NOT NULL,
   modele VARCHAR(30) NOT NULL,
   annee VARCHAR(4) NOT NULL,
-  lien_photo VARCHAR(250),
+  lien_photo VARCHAR(250) NOT NULL,
   puissance_fiscale INT NOT NULL,
   energie VARCHAR (25) NOT NULL,
   boite_vitesse ENUM('manuelle','automatique') NOT NULL,
@@ -51,3 +51,5 @@ CREATE TABLE IF NOT EXISTS facture(
 ALTER TABLE vehicule ADD CONSTRAINT fk_vehicule_utilisateur FOREIGN KEY (id_utilisateur) REFERENCES utilisateur(id_utilisateur);
 ALTER TABLE facture ADD CONSTRAINT fk_facture_utilisateur FOREIGN KEY (id_utilisateur) REFERENCES utilisateur(id_utilisateur);
 ALTER TABLE facture ADD CONSTRAINT fk_facture_vehicule FOREIGN KEY (id_vehicule) REFERENCES vehicule(id_vehicule);
+
+INSERT INTO utilisateur(identifiant, mot_de_passe, nom, prenom, date_de_naissance, civilite, telephone, mail, adresse, ville, code_postal, lien_photo, lien_permis, date_adhesion) VALUES('administrateur', 'admin1234', 'null', 'null', '0001-01-01', 'm', 'null', 'null', 'null', 'null', 'null', 'null', 'null', '0001-01-01');

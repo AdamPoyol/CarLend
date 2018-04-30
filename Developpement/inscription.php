@@ -1,5 +1,7 @@
 <?php
-require_once("inc/init.inc.php");
+
+include ("inc/header.inc.php");
+
 // Inscription
 
 if($_POST){
@@ -87,10 +89,6 @@ if($_POST){
     }
 }
 
-?>
-
-<?php
-include ("inc/header.inc.php");
 ?>
 
 <section class="row" id="content">
@@ -209,7 +207,7 @@ include ("inc/header.inc.php");
                 <td>
                     <input type="submit" value="S'inscrire" name="inscription"/>
                 </td>
-            </tr><br>
+            </tr>
         </table>
     </form><br>
 </section>

@@ -217,3 +217,32 @@ a{
     margin: 1% 5% 1% 5%;
     border: 1px solid  #f0f0f0;
 }
+
+/* ADMINISTRATION */
+
+.admin{
+    text-align: center;
+    list-style-position: inside;
+}
+
+.admin table{
+    margin: 0 auto;
+}
+
+.lien{
+  background-color: #E5E5E5;
+  border-radius: 1px;
+  border: 1px solid #A2A2A2;
+  padding: 2px 4px 2px 4px;
+
+}
+.lien:hover{
+  color: black;
+  background-color: #E5E5E5;
+  border: 1px solid #787878;
+
+}
+
+.bouton{
+    width: 2em;
+}
