@@ -27,13 +27,13 @@ if(!empty($_POST['rechercher_vehicule'])) {
         <br>
         <h1>Chercher un véhicule :</h1>
 
-        <p>1.Pour chercher un véhicule il vous suffit de remplir les filtres suivant "Marque", "Modèle" et la "Ville".</p>
+        <p>1.Pour chercher un véhicule il vous suffit de remplir les filtres "Prix maximum" et "Ville".</p>
 
         <p>2.Notre algorithme va vous chercher tous les véhicules réportorier dans notre base de donnée.</p>
 
-        <p>3.Il vous restera plus qu'a choisir un véhicule.</p>
+        <p>3.Il ne vous restera plus qu'a choisir un véhicule.</p>
 
-        <p>4.Une fois votre véhicule choisi vous cliquerer sur contacter le propriétaire pour pouvoir lui envoyer une requête.</p>
+        <p>4.Une fois votre véhicule choisi vous pourez le reserver.</p>
 
     </div>
 </div>
