@@ -1,7 +1,7 @@
 <?php
 
 function executeRequete($req,$en_ligne=true){
-    $mysqli = new mysqli("localhost", "root", "", "carlend");  // on accède à la bdd
+    $mysqli = new mysqli("mysql-carlend.alwaysdata.net", "carlend", "Romain83", "carlend_bdd");  // on accède à la bdd
     $resultat = $mysqli->query($req);
     if (!$resultat){
         if ($en_ligne == false) {
