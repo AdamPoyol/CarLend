@@ -75,10 +75,12 @@ if(isset($_GET['id_vehicule'])) {
 
     if(isset($_SESSION['id_utilisateur'])) {
         echo'
-        <div class="louer_vehicule">
+        <div class="duree_location">
             <form method="POST" action="' . $_SERVER["PHP_SELF"] . '"><br>
                 <input type="hidden" name="id_vehicule" value="' . $liste_vehicule['id_vehicule'] . '" class="form"/>
+                <label for="date_location">Du </label>
                 <input type="date" name="date_location" placeholder="date de début" class="form"/>
+                <label for="date_retour"> Au </label>
                 <input type="date" name="date_retour" placeholder="date de fin" class="form"/>
                 <input type="submit" value="louer" name="louer_vehicule" class="form"/>
             </form>

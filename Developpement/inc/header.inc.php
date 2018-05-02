@@ -28,8 +28,6 @@ if (isset($_SESSION['id_utilisateur'])){
     }
 }
 echo "
-								<input type=\"button\" value=\"page précédente\" onclick=\"javascript:history.back()\">
-
 						</div>
 					</div>
 					<div class=\"header_droite\">
@@ -45,10 +43,7 @@ if(!isset($_SESSION['id_utilisateur'])){
                         <a href=\"inscription.php\">Inscription</a>";
 }
 else {
-    $requete_utilisateur = executeRequete("SELECT nom, prenom FROM utilisateur WHERE id_utilisateur=".$_SESSION['id_utilisateur']);
-    $liste_utilisateur = $requete_utilisateur -> fetch_assoc();
-
-    echo "nom : ".$liste_utilisateur['nom']."<br>prenom : ".$liste_utilisateur['prenom']."<br>
+    echo "<a href=\"compte.php?info=utilisateur\">Mon compte</a><br><br>
            <form method=\"POST\" action=\"".$_SERVER["PHP_SELF"]."\">
            <input type=\"submit\" value=\"Se déconnecter\" name='deconnexion'/>
            </form><br>";

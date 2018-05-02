@@ -10,10 +10,22 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
+@font-face {
+    font-family: 'ABeeZee';
+    font-style: normal;
+    font-weight: 400;
+    src: local('ABeeZee Regular'), local('ABeeZee-Regular'), url(https://fonts.gstatic.com/s/abeezee/v11/TV7JXr7j4tW7mgYreANhGQ.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
 body{
   background: white no-repeat;
   background-size: cover;
+    font-family: 'ABeeZee';
   height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    list-style-position: inside;
 }
 
 a{
@@ -66,19 +78,20 @@ a{
 }
 
 .footer{
-  background-color: #EEEEEE; width: 96%; height: 10%;
-  border-radius: 10px; float: right;
-  position:relative;
+    border: 1px solid white;
+  background-color: #EEEEEE; width: 100%; height: 3%;
+    float: right;
+  position:fixed;
   bottom: 0;
-  margin: 5% 2% 2% 2%;
+  margin: 0 auto;
 }
 
 .footer_gauche{
   background:no-repeat;
   background-size: cover;
   width:30%;
-  height: 10%; float: left;
-  margin: 0 3% 3% ;
+  height: 100%; float: left;
+    margin: 0 auto;
   position: relative;
   text-align: center;
 }
@@ -87,8 +100,8 @@ a{
   background:no-repeat;
   background-size: cover;
   width:20%;
-  height: 30px; float: right;
-  margin: 20px 0 auto auto;
+  height: 100%; float: right;
+  margin: 0 auto;
   position: relative;
   text-align: center;
 }
@@ -99,10 +112,11 @@ a{
 
 /* ACCUEIL */
 
-.header_gauche a
+.header_gauche a, .header_droite a
 {
   border-bottom: 1px solid;
 }
+
 
 #conteneur_accueil{
 
@@ -203,8 +217,10 @@ a{
 /* RECHERCHE DE VEHICULE */
 
 .vehicule{
+    margin: 0 auto;
+    text-align: center;
+    list-style-position: inside;
     border:1px solid  #f0f0f0;
-    margin: auto;
     overflow : hidden;
 }
 
@@ -214,8 +230,15 @@ a{
 
 .vehicule .info{
     float: left;
-    margin: 1% 5% 1% 5%;
+    margin: 0 3%;
     border: 1px solid  #f0f0f0;
+    height: 100%;
+}
+
+.duree_location{
+    margin: 0 auto;
+    text-align: center;
+    list-style-position: inside;
 }
 
 /* ADMINISTRATION */
@@ -245,4 +268,54 @@ a{
 
 .bouton{
     width: 2em;
+}
+
+.conteneur_contact{
+  text-align: center;
+  list-style-position: inside;
+}
+
+/* COMPTE */
+
+.compte{
+    text-align: center;
+    list-style-position: inside;
+    margin: 0 auto;
+}
+
+.compte table{
+    margin: 0 auto;
+}
+
+.compte a{
+    background-color: #E5E5E5;
+    border-radius: 1px;
+    border: 1px solid #A2A2A2;
+    padding: 2px 4px 2px 4px;
+    margin: 0 5%;
+}
+
+.facture{
+    margin:5% 20%;
+    overflow : hidden;
+}
+
+.facture .achat, .facture .vente{
+    background-color: #E5E5E5;
+    margin: 0 5%;
+}
+
+.facture .achat p{
+    background-color: #C09797;
+}
+.facture .vente p{
+    background-color: #9ABA97;
+}
+
+.facture .achat h3{
+    color: red;
+}
+
+.facture .vente h3{
+    color: green;
 }
