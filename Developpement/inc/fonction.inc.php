@@ -1,6 +1,6 @@
 <?php
 
-function executeRequete($req,$en_ligne=false){
+function executeRequete($req,$en_ligne=true){
     $mysqli = new mysqli("localhost", "root", "", "carlend");  // on accède à la bdd
     $resultat = $mysqli->query($req);
     if (!$resultat){
@@ -16,7 +16,7 @@ function executeRequete($req,$en_ligne=false){
     return $resultat;
 }
 
-function debug($var,$mode=1,$en_ligne=false){
+function debug($var,$mode=1,$en_ligne=true){
     if ($en_ligne == false){
         echo '<div style="background: orange; padding: 5px; float: left; clear: both;">';
         $trace = debug_backtrace();

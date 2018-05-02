@@ -6,7 +6,7 @@ if(isset($_GET['ville']) && isset($_GET['prix_max'])) {
     $prix_max = $_GET['prix_max'];
 
     if ($ville != ''){
-        $requete_recherche_vehicule = executeRequete("SELECT v.id_vehicule, v.id_utilisateur, v.marque, v.modele, v.prix, v.lien_photo, u.ville FROM vehicule v, utilisateur u WHERE u.ville='" . $ville . "' AND v.prix<=" . $prix_max);
+        $requete_recherche_vehicule = executeRequete("SELECT v.id_vehicule, v.id_utilisateur, v.marque, v.modele, v.prix, v.lien_photo, u.ville FROM vehicule v, utilisateur u WHERE u.ville LIKE '%" . $ville . "%' AND v.prix<=" . $prix_max);
         if (!$requete_recherche_vehicule){
             echo 'Pas de véhicule correspondant à ces critères';
         }
