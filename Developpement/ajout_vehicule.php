@@ -88,29 +88,18 @@ include ("inc/header.inc.php");
             <table class="tableinscrip">
                 <tr>
                     <td>
-                        <select id="marque" name="marque" onchange="AdaptationModele(this.value);">
-                            <option value="default" >Choisir une marque</option>
-                            <option value="citroen">Citroën</option>
-                            <option value="peugeot">Peugeot</option>
-                            <option value="renault">Renault</option>
-                            <option value="volkswagen">Volkswagen</option>
-
-                            <optgroup label="Autres marques">
-                                <option value="alpharomeo">Alpha Romeo</option>
-                                <option value="audi">Audi</option>
-                                <option value="bmw">BMW</option>
-                                <option value="fiat">Fiat</option>
-                                <option value="opel">Opel</option>
-                                <option value=""> . . . </option>
-                            </optgroup>
-                        </select>
+                        <label for="marque">Marque</label>
+                    </td>
+                    <td>
+                        <input type="text" name="marque" placeholder="Marque" required="required"/>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <select id="modele" name="modele">
-                            <option >Choisir un modèle</option>
-                        </select>
+                        <label for="modele">Modèle</label>
+                    </td>
+                    <td>
+                        <input type="text" name="modele" placeholder="Modèle" required="required"/>
                     </td>
                 </tr>
                 <tr>

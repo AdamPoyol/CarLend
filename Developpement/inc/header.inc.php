@@ -17,7 +17,7 @@ echo "<!DOCTYPE html>
 						</div>
 						<div class=\"header_gauche_menu\">
 							<a href=\"accueil.php\">Accueil</a><br><br>
-								<a href=\"ajout_vehicule.php\">Louer mon véhicules</a><br><br>
+								<a href=\"ajout_vehicule.php\">Louer mon véhicule</a><br><br>
 								";
 if (isset($_SESSION['id_utilisateur'])){
     $requete_utilisateur = executeRequete("SELECT identifiant, mot_de_passe FROM utilisateur WHERE id_utilisateur=".$_SESSION['id_utilisateur']);
