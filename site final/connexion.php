@@ -11,7 +11,7 @@ if(!empty($_POST['connexion'])) {
     $identifiant = $_POST['identifiant'];
     $mot_de_passe = $_POST['mot_de_passe'];
 
-    $bdd = new mysqli("localhost", "root", "", "carlend");  // on accède à la bdd
+    $bdd = new mysqli("mysql-carlend.alwaysdata.net", "carlend", "Romain83", "carlend_bdd");  // on accède à la bdd
 
     $requete_verification = $bdd->query("SELECT id_utilisateur, identifiant, mot_de_passe FROM utilisateur");    // on recupere les donnes de connexion
     $liste_verification = $requete_verification -> fetch_assoc();  // on stock chaque colonne dans une case de tableau

@@ -7,17 +7,17 @@ if($_POST){
     // on récupère les données
 
     $id_utilisateur = $_SESSION['id_utilisateur'];
-    $immatriculation = $_POST['immatriculation'];
-    $marque = $_POST['marque'];
-    $modele = $_POST['modele'];
-    $annee = $_POST['annee'];
-    $puissance_fiscale = $_POST['puissance_fiscale'];
-    $energie = $_POST['energie'];
-    $boite_vitesse = $_POST['boite_vitesse'];
-    $nb_porte = $_POST['nb_porte'];
-    $nb_place = $_POST['nb_place'];
+    $immatriculation = replace($_POST['immatriculation']);
+    $marque = replace($_POST['marque']);
+    $modele = replace($_POST['modele']);
+    $annee = replace($_POST['annee']);
+    $puissance_fiscale = replace($_POST['puissance_fiscale']);
+    $energie = replace($_POST['energie']);
+    $boite_vitesse = replace($_POST['boite_vitesse']);
+    $nb_porte = replace($_POST['nb_porte']);
+    $nb_place = replace($_POST['nb_place']);
     $lien_photo = $_FILES['lien_photo']['name'];
-    $prix = $_POST['prix'];
+    $prix = replace($_POST['prix']);
     $date_mise_en_location = date("Y-m-d");
 
 

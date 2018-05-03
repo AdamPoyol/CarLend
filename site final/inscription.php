@@ -8,17 +8,17 @@ if($_POST){
     debug($_POST);
     // on récupère les données
 
-    $identifiant = $_POST['identifiant'];
-    $mot_de_passe = $_POST['mot_de_passe'];
-    $nom = $_POST['nom'];
-    $prenom = $_POST['prenom'];
+    $identifiant = replace($_POST['identifiant']);
+    $mot_de_passe = replace($_POST['mot_de_passe']);
+    $nom = replace($_POST['nom']);
+    $prenom = replace($_POST['prenom']);
     $date_de_naissance = $_POST['date_de_naissance'];
-    $civilite = $_POST['civilite'];
-    $telephone = $_POST['telephone'];
-    $mail = $_POST['mail'];
-    $adresse = $_POST['adresse'];
-    $ville = $_POST['ville'];
-    $code_postal = $_POST['code_postal'];
+    $civilite = replace($_POST['civilite']);
+    $telephone = replace($_POST['telephone']);
+    $mail = replace($_POST['mail']);
+    $adresse = replace($_POST['adresse']);
+    $ville = strtoupper(replace($_POST['ville']));
+    $code_postal = replace($_POST['code_postal']);
     $lien_photo = $_FILES['lien_photo']['name'];
     $lien_permis = $_FILES['lien_permis']['name'];
     $date_adhesion = date("Y-m-d");

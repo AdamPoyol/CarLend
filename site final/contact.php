@@ -3,14 +3,12 @@
     require_once("inc/header.inc.php");
 ?>
         <div class = "conteneur_contact">
-            <h2> Envoyer une demande </h2>
-            <p> Aidez-nous à vous répondre plus rapidement.
-
-                Précisez vos problèmes en renseignant les champs ci-dessous ce qui nous permettra
-                d'orienter votre question vers le département adéquat.
+            <h2> Envoyer une demande </h2><br><br>
+            <p> Aidez-nous à vous répondre plus rapidement.<br><br>
+                Précisez vos problèmes en renseignant les champs ci-dessous ce qui nous permettra d'orienter votre question vers le département adéquat. <br><br>
                 Soyez précis et si besoin, n'hésitez pas à associer à votre message des photocopies de documents.</p>
 
-            <form method="post" action=".php">
+            <form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>" enctype="multipart/form-data" class="inscrip">
                 <label><br>
                     <label>Adresse e-mail</label>
                     <input class="contact" id="email" type="email" name="mail" placeholder="Adresse e-mail"/><br><br>
@@ -22,9 +20,9 @@
                     <textarea  class="contact2" name="ameliorer" id="ameliorer" placeholder="Descriptif" ></textarea><br><br>
 
                     <label>Pièces jointes</label>
-                    <input class="contact2" type="file" multiple="true" id="request-attachments" data-fileupload="true" data-dropzone="upload-dropzone" ><br><br><br>
+                    <input class="contact2" type="file" id="request-attachments" data-fileupload="true" data-dropzone="upload-dropzone" ><br><br><br>
 
-                    <input class="contact" type="submit" name ="commit" value="Envoyer">
+                    <input class="contact" type="submit" name="commit" value="Envoyer">
                     <br><br><br>
                 </label>
             </form>
